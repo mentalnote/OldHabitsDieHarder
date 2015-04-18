@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using UnityStandardAssets.Characters.FirstPerson;
+
 public class Hands : MonoBehaviour
 {
+    [SerializeField]
+    private FirstPersonController fpsController;
+
     [SerializeField]
     private Camera camera;
 
@@ -56,7 +61,18 @@ public class Hands : MonoBehaviour
             }
         }
 
-        this.Position = this.camera.ScreenToWorldPoint(Input.mousePosition);
+	    if (Input.GetKeyDown(KeyCode.LeftShift))
+	    {
+	        this.fpsController.MouseLook.XSensitivity = 0f;
+	        this.fpsController.MouseLook.YSensitivity = 0f;
+	    }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            this.fpsController.MouseLook.XSensitivity = 2f;
+            this.fpsController.MouseLook.YSensitivity = 2f;
+        }
+
+        this.Position = this.camera.ScreenPointToRay(Input.mousePosition).GetPoint(this.heldWeaponOffset);
 
 	    this.heldWeapon.transform.position = this.Position;
 	}
