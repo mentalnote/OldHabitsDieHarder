@@ -3,6 +3,12 @@ using System.Collections;
 
 public class ExampleScenario : Scenario
 {
+	//Returns the narration clip for when we win the scenario
+	protected override Narration getScenarioWonNarration()  { return Narration.Test1; }
+	
+	//Returns the narration clip for when we lose the scenario
+	protected override Narration getScenarioLostNarration() { return Narration.Test2; }
+
 	//Our flags enum
 	public enum Flags
 	{
@@ -13,9 +19,9 @@ public class ExampleScenario : Scenario
 		FlagFive
 	};
 
-	//We need to implement this to tell the base class about our flag enum values
-	override protected int[] GetFlagKeys() {
-		return EnumUtil.ArrayFromEnum(typeof(ExampleScenario.Flags));
+	//We need to implement this to tell the base class about our flag enum
+	override protected System.Type GetEnumType() {
+		return typeof(ExampleScenario.Flags);
 	}
 	
 	void Start()
