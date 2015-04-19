@@ -24,6 +24,10 @@ abstract public class Scenario : MonoBehaviour
 		public bool isOneShot;
 	}
 
+	//Keep track of whether or not we are in the middle of processing triggers
+	private bool currentlyProcessingTriggers = false;
+	private Queue< KeyValuePair<int, bool> > queuedFlagChanges;
+
 	//Keep track of whether or not we have just won or lost, and are ignoring flag changes
 	protected bool isScenarioOver = false;
 
@@ -36,6 +40,9 @@ abstract public class Scenario : MonoBehaviour
 	//This method needs to be called in the Awake() or Start() method of every concrete subclass
 	protected void InitialiseScenario()
 	{
+		//Initialise the list of queued flag changes
+		this.queuedFlagChanges = new Queue<KeyValuePair<int, bool>>();
+
 		//Initialise the list of flags
 		this.flags = new Dictionary<int, bool>();
 		int[] flagKeys = EnumUtil.ArrayFromEnum( this.GetEnumType() );
@@ -66,10 +73,17 @@ abstract public class Scenario : MonoBehaviour
 
 		//Convert the flag key value to an int
 		int flagKey = (int)System.Convert.ChangeType(flagKeyVal, typeof(int));
-
+		
 		//Sanity check
 		if (!this.flags.ContainsKey((int)flagKey)) {
 			throw new System.IndexOutOfRangeException("Invalid flag: " + flagKey);
+		}
+
+		//If we're in the middle of processing flag change triggers, queue any changes
+		if (this.currentlyProcessingTriggers == true)
+		{
+			this.queuedFlagChanges.Enqueue( new KeyValuePair<int,bool>(flagKey, value) );
+			return;
 		}
 
 		//Set the flag value and process any triggers
@@ -143,6 +157,9 @@ abstract public class Scenario : MonoBehaviour
 	//Processes registered triggers whenever a flag changes
 	private void ProcessTriggers()
 	{
+		//Ensure any calls to SetFlag() within our triggers are queued
+		this.currentlyProcessingTriggers = true;
+
 		//Maintain a list of triggered one-shot handlers to remove
 		List<int> indicesToRemove = new List<int>();
 
@@ -177,6 +194,14 @@ abstract public class Scenario : MonoBehaviour
 		//Remove any triggers that were marked for removal
 		foreach (int index in indicesToRemove) {
 			this.flagTriggers.RemoveAt(index);
+		}
+
+		//Process any queued flag changes
+		this.currentlyProcessingTriggers = false;
+		while (this.queuedFlagChanges.Count > 0)
+		{
+			KeyValuePair<int,bool> currPair = this.queuedFlagChanges.Dequeue();
+			this.SetFlag( currPair.Key, currPair.Value );
 		}
 	}
 
