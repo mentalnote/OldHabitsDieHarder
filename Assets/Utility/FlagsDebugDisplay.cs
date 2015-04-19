@@ -32,6 +32,6 @@ public class FlagsDebugDisplay : MonoBehaviour
 
 		GUI.color = Color.black;
 		GUI.backgroundColor = new Color(0, 0, 0, 0);
-		GUI.TextArea(new Rect (0, 0, 999999, 999999), debugText);
+		GUI.Label(new Rect (0, 0, 999999, 999999), debugText);
 	}
 }

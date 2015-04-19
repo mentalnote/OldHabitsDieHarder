@@ -24,7 +24,7 @@ public class CandleRoomScenario : Scenario
 		return typeof(CandleRoomScenario.Flags);
 	}
 
-	void Start()
+	void Awake()
 	{
 		//We need to call InitialiseScenario() in either Awake() or Start()
 		this.InitialiseScenario();

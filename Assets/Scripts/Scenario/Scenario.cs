@@ -136,7 +136,7 @@ abstract public class Scenario : MonoBehaviour
 	}
 
 	//Registers a flag trigger
-	protected void RegisterFlagTrigger(int[] triggerFlagsSet, int[] triggerFlagsUnset, FlagTriggerDelegate handler, bool isOneShot = false) {
+	public void RegisterFlagTrigger(int[] triggerFlagsSet, int[] triggerFlagsUnset, FlagTriggerDelegate handler, bool isOneShot = false) {
 		this.flagTriggers.Add( new FlagTriggerDetails(triggerFlagsSet, triggerFlagsUnset, handler, isOneShot) );
 	}
 		
