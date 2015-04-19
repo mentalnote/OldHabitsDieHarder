@@ -7,16 +7,32 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
+
 using UnityEngine;
 
 public class SelectWeapon : MonoBehaviour
 {
     [SerializeField]
-    private Weapons selectedWeapon;
+    private Hands hands;
+
+    [SerializeField]
+    private Weapon selectedWeapon;
 
     public void SelectionFired()
     {
-        Debug.Log(this.selectedWeapon);
+        if (this.selectedWeapon != null & this.hands != null)
+        {
+            this.hands.HeldWeapon = this.selectedWeapon;
+        }
+    }
+
+    private void Start()
+    {
+        if (this.hands == null)
+        {
+            this.hands = FindObjectOfType<Hands>();    
+        }
     }
 
 }

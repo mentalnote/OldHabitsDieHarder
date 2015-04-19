@@ -53,7 +53,7 @@ public class Flamethrower : Weapon
 
             if (fireComp != null)
             {
-                fireComp.Target = this.gameObject;
+                fireComp.Target = this.transform.root.gameObject;
             }
         }
     }

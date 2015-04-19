@@ -32,7 +32,7 @@ public class Hands : MonoBehaviour
         {
             if (this.heldWeapon != null)
             {
-                Destroy(this.heldWeapon);
+                Destroy(this.heldWeapon.gameObject);
             }
 
             if (value == null)
