@@ -493,7 +493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7807119fb4d8b74e9d7b83753ea9b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedWeapon: 0
+  hands: {fileID: 0}
+  selectedWeapon: {fileID: 0}
 --- !u!81 &2091723566
 AudioListener:
   m_ObjectHideFlags: 0
