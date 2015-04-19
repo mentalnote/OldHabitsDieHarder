@@ -38,7 +38,7 @@ abstract public class Scenario : MonoBehaviour
 	{
 		//Initialise the list of flags
 		this.flags = new Dictionary<int, bool>();
-		int[] flagKeys = this.GetFlagKeys();
+		int[] flagKeys = EnumUtil.ArrayFromEnum( this.GetEnumType() );
 		foreach (int key in flagKeys) {
 			this.flags[key] = false;
 		}
@@ -48,6 +48,12 @@ abstract public class Scenario : MonoBehaviour
 
 		//When the scenario first becomes active, set it as the current scenario
 		ScenarioManager.SetCurrentScenario(this);
+
+		//If there is a flags debug instance present, set our enum type for it
+		FlagsDebugDisplay flagDebug = this.gameObject.GetComponent<FlagsDebugDisplay>();
+		if (flagDebug != null) {
+			flagDebug.enumType = this.GetEnumType();
+		}
 	}
 
 	//Sets the value of a flag
@@ -91,7 +97,7 @@ abstract public class Scenario : MonoBehaviour
 			this.isScenarioOver = true;
 
 			//Play the narrator's sound clip
-			NarratorLibrary.PlayNarration (null, this.getScenarioWonNarration ());
+			NarratorLibrary.PlayNarration(null, this.getScenarioWonNarration());
 		
 			//Show the "scenario won" text
 			//...
@@ -115,7 +121,7 @@ abstract public class Scenario : MonoBehaviour
 			this.isScenarioOver = true;
 
 			//Play the narrator's sound clip
-			NarratorLibrary.PlayNarration (null, this.getScenarioLostNarration ());
+			NarratorLibrary.PlayNarration(null, this.getScenarioLostNarration());
 
 			//Show the "scenario lost" text
 			//...
@@ -184,6 +190,6 @@ abstract public class Scenario : MonoBehaviour
 		
 	//Concrete classes must implement these methods:
 		
-		//Returns the list of flag keys (the underlying int values of the enum)
-		abstract protected int[] GetFlagKeys();
+		//Returns the enum type used for our flags
+		abstract protected System.Type GetEnumType();
 }

@@ -19,9 +19,9 @@ public class ExampleScenario : Scenario
 		FlagFive
 	};
 
-	//We need to implement this to tell the base class about our flag enum values
-	override protected int[] GetFlagKeys() {
-		return EnumUtil.ArrayFromEnum(typeof(ExampleScenario.Flags));
+	//We need to implement this to tell the base class about our flag enum
+	override protected System.Type GetEnumType() {
+		return typeof(ExampleScenario.Flags);
 	}
 	
 	void Start()

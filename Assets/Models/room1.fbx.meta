@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 57b846b91e94a474abf8cf6f2a206f6f
-timeCreated: 1429412533
+guid: 7ac6425259de549209d2cb5f11656b73
+timeCreated: 1429417737
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -11,44 +11,46 @@ ModelImporter:
     100006: desk
     100008: door
     100010: fan
-    100012: fan_1
-    100014: fire_sprinker
-    100016: left_window
-    100018: left_window_background
-    100020: left_window_left_curtain
-    100022: left_window_right_curtain
-    100024: light
-    100026: light_switch
-    100028: ran_2
-    100030: right_window
-    100032: right_window_background
-    100034: right_window_left_curtain
-    100036: right_window_right_curtain
-    100038: //RootNode
-    100040: table
-    100042: vase
+    100012: fan1
+    100014: fan2
+    100016: fire_sprinker
+    100018: left_window
+    100020: left_window_background
+    100022: left_window_left_curtain
+    100024: left_window_right_curtain
+    100026: light
+    100028: light_switch
+    100030: pipe
+    100032: right_window
+    100034: right_window_background
+    100036: right_window_left_curtain
+    100038: right_window_right_curtain
+    100040: //RootNode
+    100042: table
+    100044: vase
     400000: bookcase
     400002: chair_1
     400004: chair_2
     400006: desk
     400008: door
     400010: fan
-    400012: fan_1
-    400014: fire_sprinker
-    400016: left_window
-    400018: left_window_background
-    400020: left_window_left_curtain
-    400022: left_window_right_curtain
-    400024: light
-    400026: light_switch
-    400028: ran_2
-    400030: right_window
-    400032: right_window_background
-    400034: right_window_left_curtain
-    400036: right_window_right_curtain
-    400038: //RootNode
-    400040: table
-    400042: vase
+    400012: fan1
+    400014: fan2
+    400016: fire_sprinker
+    400018: left_window
+    400020: left_window_background
+    400022: left_window_left_curtain
+    400024: left_window_right_curtain
+    400026: light
+    400028: light_switch
+    400030: pipe
+    400032: right_window
+    400034: right_window_background
+    400036: right_window_left_curtain
+    400038: right_window_right_curtain
+    400040: //RootNode
+    400042: table
+    400044: vase
     2300000: bookcase
     2300002: chair_1
     2300004: chair_2
@@ -61,12 +63,13 @@ ModelImporter:
     2300018: left_window_right_curtain
     2300020: light
     2300022: light_switch
-    2300024: right_window
-    2300026: right_window_background
-    2300028: right_window_left_curtain
-    2300030: right_window_right_curtain
-    2300032: table
-    2300034: vase
+    2300024: pipe
+    2300026: right_window
+    2300028: right_window_background
+    2300030: right_window_left_curtain
+    2300032: right_window_right_curtain
+    2300034: table
+    2300036: vase
     3300000: bookcase
     3300002: chair_1
     3300004: chair_2
@@ -79,12 +82,13 @@ ModelImporter:
     3300018: left_window_right_curtain
     3300020: light
     3300022: light_switch
-    3300024: right_window
-    3300026: right_window_background
-    3300028: right_window_left_curtain
-    3300030: right_window_right_curtain
-    3300032: table
-    3300034: vase
+    3300024: pipe
+    3300026: right_window
+    3300028: right_window_background
+    3300030: right_window_left_curtain
+    3300032: right_window_right_curtain
+    3300034: table
+    3300036: vase
     4300000: right_window_background
     4300002: left_window_background
     4300004: fire_sprinker
@@ -104,6 +108,8 @@ ModelImporter:
     4300032: desk
     4300034: vase
     4300036: bookcase
+    4300038: pipe
+    7400000: Take 001
     9500000: //RootNode
     13700000: fan
   materials:
