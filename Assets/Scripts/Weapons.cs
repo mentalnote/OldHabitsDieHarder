@@ -15,6 +15,7 @@ public enum Weapons {
     BoxingGloves,
     Bat,
     Knife,
+    Sword,
     Bottle,
     None
 }
