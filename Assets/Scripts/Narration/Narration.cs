@@ -12,6 +12,7 @@
 /// </summary>
 public enum Narration
 {
+	None,
     Test1,
     Test2
 }

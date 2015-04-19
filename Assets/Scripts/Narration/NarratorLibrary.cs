@@ -16,14 +16,25 @@ public class NarratorLibrary : MonoBehaviour
 
     public static void PlayNarration(AudioSource audioSource, Narration narration)
     {
+		if (narration == Narration.None) {
+			return;
+		}
+
         if (!NarrationMap.ContainsKey(narration))
         {
             NarrationMap.Add(narration, LoadAudioClip(narration));
         }
         AudioClip sound = NarrationMap[narration];
 
-        audioSource.clip = sound;
-        audioSource.Play();
+		//If we have an audio source, use it, otherwise play at the camera position
+		if (audioSource != null)
+		{
+			audioSource.clip = sound;
+			audioSource.Play ();
+
+		} else {
+			AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position);
+		}
     }
 
     private static AudioClip LoadAudioClip(Narration narration)

@@ -3,6 +3,12 @@ using System.Collections;
 
 public class ExampleScenario : Scenario
 {
+	//Returns the narration clip for when we win the scenario
+	protected override Narration getScenarioWonNarration()  { return Narration.Test1; }
+	
+	//Returns the narration clip for when we lose the scenario
+	protected override Narration getScenarioLostNarration() { return Narration.Test2; }
+
 	//Our flags enum
 	public enum Flags
 	{

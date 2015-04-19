@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 //Delegate for flag triggers
 public delegate void FlagTriggerDelegate();
@@ -23,13 +24,16 @@ abstract public class Scenario : MonoBehaviour
 		public bool isOneShot;
 	}
 
+	//Keep track of whether or not we have just won or lost, and are ignoring flag changes
+	protected bool isScenarioOver = false;
+
 	//Our flags
 	protected Dictionary<int, bool> flags;
 
 	//Our flag triggers
 	protected List<FlagTriggerDetails> flagTriggers;
 
-	//This method needs to be called in the Awake() or Start() method of the concrete subclass
+	//This method needs to be called in the Awake() or Start() method of every concrete subclass
 	protected void InitialiseScenario()
 	{
 		//Initialise the list of flags
@@ -49,6 +53,11 @@ abstract public class Scenario : MonoBehaviour
 	//Sets the value of a flag
 	public void SetFlag<T>(T flagKeyVal, bool value = true)
 	{
+		//If the scenario is already over and we're waiting for a level load, ignore all flag changes
+		if (this.isScenarioOver == true) {
+			return;
+		}
+
 		//Convert the flag key value to an int
 		int flagKey = (int)System.Convert.ChangeType(flagKeyVal, typeof(int));
 
@@ -72,11 +81,59 @@ abstract public class Scenario : MonoBehaviour
 		return this.flags[flagKey];
 	}
 
+	//"Wins" the scenario
+	public void WinScenario()
+	{
+		//Prevent multiple successive calls to this method
+		if (this.isScenarioOver == false)
+		{
+			//Set the "scenario over" flag
+			this.isScenarioOver = true;
+
+			//Play the narrator's sound clip
+			NarratorLibrary.PlayNarration (null, this.getScenarioWonNarration ());
+		
+			//Show the "scenario won" text
+			//...
+		
+			//Delay before the level load, so the player can see the transition
+			Timer.SetTimer(5.0f, this.gameObject, delegate()
+			{
+				//Load the next level
+				Application.LoadLevel(Application.loadedLevel + 1);
+			});
+		}
+	}
+
+	//"Loses" the scenario
+	public void LoseScenario()
+	{
+		//Prevent multiple successive calls to this method
+		if (this.isScenarioOver == false)
+		{
+			//Set the "scenario over" flag
+			this.isScenarioOver = true;
+
+			//Play the narrator's sound clip
+			NarratorLibrary.PlayNarration (null, this.getScenarioLostNarration ());
+
+			//Show the "scenario lost" text
+			//...
+
+			//Delay before the level load, so the player can see the transition
+			Timer.SetTimer(5.0f, this.gameObject, delegate()
+			{
+				//Restart the level
+				Application.LoadLevel(Application.loadedLevel);
+			});
+		}
+	}
+
 	//Registers a flag trigger
 	protected void RegisterFlagTrigger(int[] triggerFlagsSet, int[] triggerFlagsUnset, FlagTriggerDelegate handler, bool isOneShot = false) {
 		this.flagTriggers.Add( new FlagTriggerDetails(triggerFlagsSet, triggerFlagsUnset, handler, isOneShot) );
 	}
-
+		
 	//Processes registered triggers whenever a flag changes
 	private void ProcessTriggers()
 	{
@@ -117,6 +174,14 @@ abstract public class Scenario : MonoBehaviour
 		}
 	}
 
+	//Concrete classes can override these methods if they want to:
+		
+		//Returns the narration clip for when we win the scenario
+		virtual protected Narration getScenarioWonNarration()  { return Narration.None; }
+
+		//Returns the narration clip for when we lose the scenario
+		virtual protected Narration getScenarioLostNarration() { return Narration.None; }
+		
 	//Concrete classes must implement these methods:
 		
 		//Returns the list of flag keys (the underlying int values of the enum)

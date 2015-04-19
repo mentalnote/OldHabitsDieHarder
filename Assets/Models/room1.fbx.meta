@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 57b846b91e94a474abf8cf6f2a206f6f
+timeCreated: 1429412533
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bookcase
+    100002: chair_1
+    100004: chair_2
+    100006: desk
+    100008: door
+    100010: fan
+    100012: fan_1
+    100014: fire_sprinker
+    100016: left_window
+    100018: left_window_background
+    100020: left_window_left_curtain
+    100022: left_window_right_curtain
+    100024: light
+    100026: light_switch
+    100028: ran_2
+    100030: right_window
+    100032: right_window_background
+    100034: right_window_left_curtain
+    100036: right_window_right_curtain
+    100038: //RootNode
+    100040: table
+    100042: vase
+    400000: bookcase
+    400002: chair_1
+    400004: chair_2
+    400006: desk
+    400008: door
+    400010: fan
+    400012: fan_1
+    400014: fire_sprinker
+    400016: left_window
+    400018: left_window_background
+    400020: left_window_left_curtain
+    400022: left_window_right_curtain
+    400024: light
+    400026: light_switch
+    400028: ran_2
+    400030: right_window
+    400032: right_window_background
+    400034: right_window_left_curtain
+    400036: right_window_right_curtain
+    400038: //RootNode
+    400040: table
+    400042: vase
+    2300000: bookcase
+    2300002: chair_1
+    2300004: chair_2
+    2300006: desk
+    2300008: door
+    2300010: fire_sprinker
+    2300012: left_window
+    2300014: left_window_background
+    2300016: left_window_left_curtain
+    2300018: left_window_right_curtain
+    2300020: light
+    2300022: light_switch
+    2300024: right_window
+    2300026: right_window_background
+    2300028: right_window_left_curtain
+    2300030: right_window_right_curtain
+    2300032: table
+    2300034: vase
+    3300000: bookcase
+    3300002: chair_1
+    3300004: chair_2
+    3300006: desk
+    3300008: door
+    3300010: fire_sprinker
+    3300012: left_window
+    3300014: left_window_background
+    3300016: left_window_left_curtain
+    3300018: left_window_right_curtain
+    3300020: light
+    3300022: light_switch
+    3300024: right_window
+    3300026: right_window_background
+    3300028: right_window_left_curtain
+    3300030: right_window_right_curtain
+    3300032: table
+    3300034: vase
+    4300000: right_window_background
+    4300002: left_window_background
+    4300004: fire_sprinker
+    4300006: chair_1
+    4300008: chair_2
+    4300010: fan
+    4300012: right_window_left_curtain
+    4300014: right_window_right_curtain
+    4300016: left_window_right_curtain
+    4300018: left_window_left_curtain
+    4300020: light
+    4300022: door
+    4300024: table
+    4300026: light_switch
+    4300028: left_window
+    4300030: right_window
+    4300032: desk
+    4300034: vase
+    4300036: bookcase
+    9500000: //RootNode
+    13700000: fan
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
