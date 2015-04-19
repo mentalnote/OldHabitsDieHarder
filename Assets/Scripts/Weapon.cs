@@ -1,9 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Collider))]
 public class Weapon : MonoBehaviour
 {
+
+    static public string GetWeaponType(GameObject o)
+    {
+        Weapon w = o.GetComponent<Weapon>();
+        if (w != null) {
+            return w.weaponType;
+        }
+
+        //Not a weapon
+        return "";
+    }
+
     [SerializeField]
     private string weaponType = "BASE";
 
@@ -15,6 +26,9 @@ public class Weapon : MonoBehaviour
 
     [SerializeField]
     private AnimationClip animClip;
+
+    [SerializeField]
+    private bool disable = false;
 
     public string WeaponType
     {
@@ -64,23 +78,27 @@ public class Weapon : MonoBehaviour
 
     protected void StartPlayWeaponAnim()
     {
-        if (this.animation != null && !this.animation.isPlaying)
+        if (this.animation != null && this.animClip != null)
         {
             this.animation.clip = this.animClip;
-            this.animation.Play();
+            this.animation.Play(this.animation.clip.name);
+            this.animation[this.animation.clip.name].wrapMode = WrapMode.Loop;
         }
     }
 
     protected void StopPlayWeaponAnim()
     {
-        if (this.animation != null && this.animation.isPlaying)
+        if (this.animation != null && this.animClip != null)
         {
-            this.animation.Stop();
+            this.animation[this.animation.clip.name].wrapMode = WrapMode.Once;
         }
     }
 
     private void Start()
     {
-        this.ColliderEnabled = false;
+        if (!disable)
+        {
+            this.ColliderEnabled = false;    
+        }
     }
 }

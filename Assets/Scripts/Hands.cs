@@ -6,13 +6,16 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class Hands : MonoBehaviour
 {
     [SerializeField]
+    private GameObject handObject;
+
+    [SerializeField]
     private FirstPersonController fpsController;
 
     [SerializeField]
     private Camera camera;
 
     [SerializeField]
-    private float heldWeaponOffset = 10.0f;
+    private float heldWeaponOffset = 1.0f;
 
     private Weapon heldWeapon;
 
@@ -37,12 +40,14 @@ public class Hands : MonoBehaviour
                 return;
             }
 
-            GameObject weaponGameObject = (GameObject)Instantiate(
-                value.transform.root.gameObject,
-                this.Position,
-                Quaternion.LookRotation(this.transform.forward, Vector3.up));
+            GameObject weaponGameObject = Instantiate(value.transform.root.gameObject);
 
-            weaponGameObject.transform.parent = this.transform;
+            weaponGameObject.transform.parent = this.handObject.transform;
+            this.handObject.transform.position = this.Position;
+            this.handObject.transform.rotation = Quaternion.LookRotation(this.transform.forward, Vector3.up);
+
+            weaponGameObject.transform.localPosition = Vector3.zero;
+            weaponGameObject.transform.localRotation = Quaternion.identity;
 
             this.heldWeapon = weaponGameObject.GetComponentInChildren<Weapon>();
         }
@@ -61,11 +66,11 @@ public class Hands : MonoBehaviour
             }
         }
 
-	    if (Input.GetKeyDown(KeyCode.LeftShift))
-	    {
-	        this.fpsController.MouseLook.XSensitivity = 0f;
-	        this.fpsController.MouseLook.YSensitivity = 0f;
-	    }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            this.fpsController.MouseLook.XSensitivity = 0f;
+            this.fpsController.MouseLook.YSensitivity = 0f;
+        }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             this.fpsController.MouseLook.XSensitivity = 2f;
@@ -74,6 +79,13 @@ public class Hands : MonoBehaviour
 
         this.Position = this.camera.ScreenPointToRay(Input.mousePosition).GetPoint(this.heldWeaponOffset);
 
-	    this.heldWeapon.transform.position = this.Position;
-	}
+        if (this.handObject == null)
+        {
+            this.heldWeapon.transform.position = this.Position;
+        }
+        else
+        {
+            this.handObject.transform.position = this.Position;
+        }
+    }
 }
