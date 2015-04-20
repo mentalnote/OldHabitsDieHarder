@@ -298,12 +298,12 @@ MonoBehaviour:
   collider: {fileID: 0}
   animation: {fileID: 11124320}
   animClip: {fileID: 7400000, guid: d4e727169bc86ec47bff6b4854235389, type: 3}
-  soundSource: {fileID: 8277970}
   disable: 0
   bulletPrefab: {fileID: 178578, guid: b858acca2fc036640b8ad8164a54d16b, type: 2}
   firePoint: {fileID: 169516}
   fireRate: 4
   firingForce: 100
+  gunFireAudio: {fileID: 8277970}
 --- !u!137 &13794182
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -59,6 +59,7 @@ GameObject:
   - 111: {fileID: 11124418}
   - 114: {fileID: 11422202}
   - 82: {fileID: 8243782}
+  - 114: {fileID: 11470768}
   m_Layer: 0
   m_Name: BoxingGloves
   m_TagString: Untagged
@@ -89,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .609009862, y: -.831580162, z: -.844876945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453074}
@@ -183,7 +184,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -269,8 +270,19 @@ MonoBehaviour:
   collider: {fileID: 6521094}
   animation: {fileID: 11124418}
   animClip: {fileID: 7400000, guid: f1d9b0ea8dfcb5a46a82f7b03589f808, type: 2}
-  soundSource: {fileID: 8243782}
   disable: 0
+--- !u!114 &11470768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfa296dc01a6344ca24cfff4dc81ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 8243782}
 --- !u!137 &13724462
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -62,7 +62,7 @@ public class Hands : MonoBehaviour
             {
                 this.heldWeapon.StartUseWeapon();
 
-                this.weaponUseMinimumTime = 1.0f;
+                this.weaponUseMinimumTime = 0.3f;
             }
             else if (this.weaponUseMinimumTime <= 0.0f && !Input.GetMouseButton(0))
             {
