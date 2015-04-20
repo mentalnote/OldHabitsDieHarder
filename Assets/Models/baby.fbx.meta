@@ -1,0 +1,287 @@
+fileFormatVersion: 2
+guid: 280350ed64c98fe4cb0b08dc2488f82e
+timeCreated: 1429524070
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: baby
+    100002: //RootNode
+    100004: chest
+    100006: daiper
+    100008: daiper_left_2
+    100010: daiper_left_3
+    100012: daiper_left_4
+    100014: daiper_right_1
+    100016: daiper_right_2
+    100018: daiper_right_3
+    100020: daiper_right_4
+    100022: diaper_left_1
+    100024: head
+    100026: left_elbow
+    100028: left_foot
+    100030: left_hand
+    100032: left_hip
+    100034: left_leg
+    100036: left_shoulder
+    100038: neck
+    100040: right_elbow
+    100042: right_foot
+    100044: right_hand
+    100046: right_hip
+    100048: right_leg
+    100050: right_shoulder
+    100052: root
+    400000: //RootNode
+    400002: baby
+    400004: chest
+    400006: daiper
+    400008: daiper_left_2
+    400010: daiper_left_3
+    400012: daiper_left_4
+    400014: daiper_right_1
+    400016: daiper_right_2
+    400018: daiper_right_3
+    400020: daiper_right_4
+    400022: diaper_left_1
+    400024: head
+    400026: left_elbow
+    400028: left_foot
+    400030: left_hand
+    400032: left_hip
+    400034: left_leg
+    400036: left_shoulder
+    400038: neck
+    400040: right_elbow
+    400042: right_foot
+    400044: right_hand
+    400046: right_hip
+    400048: right_leg
+    400050: right_shoulder
+    400052: root
+    4300000: baby
+    4300002: daiper
+    7400000: Idle
+    7400002: Diaper Unfold
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: baby
+    13700002: daiper
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: baby
+        weight: 1
+      - path: daiper
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/chest
+        weight: 1
+      - path: root/chest/left_shoulder
+        weight: 1
+      - path: root/chest/left_shoulder/left_elbow
+        weight: 1
+      - path: root/chest/left_shoulder/left_elbow/left_hand
+        weight: 1
+      - path: root/chest/neck
+        weight: 1
+      - path: root/chest/neck/head
+        weight: 1
+      - path: root/chest/right_shoulder
+        weight: 1
+      - path: root/chest/right_shoulder/right_elbow
+        weight: 1
+      - path: root/chest/right_shoulder/right_elbow/right_hand
+        weight: 1
+      - path: root/daiper_right_1
+        weight: 1
+      - path: root/daiper_right_1/daiper_right_2
+        weight: 1
+      - path: root/daiper_right_1/daiper_right_2/daiper_right_3
+        weight: 1
+      - path: root/daiper_right_1/daiper_right_2/daiper_right_3/daiper_right_4
+        weight: 1
+      - path: root/diaper_left_1
+        weight: 1
+      - path: root/diaper_left_1/daiper_left_2
+        weight: 1
+      - path: root/diaper_left_1/daiper_left_2/daiper_left_3
+        weight: 1
+      - path: root/diaper_left_1/daiper_left_2/daiper_left_3/daiper_left_4
+        weight: 1
+      - path: root/left_hip
+        weight: 1
+      - path: root/left_hip/left_leg
+        weight: 1
+      - path: root/left_hip/left_leg/left_foot
+        weight: 1
+      - path: root/right_hip
+        weight: 1
+      - path: root/right_hip/right_leg
+        weight: 1
+      - path: root/right_hip/right_leg/right_foot
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Diaper Unfold
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 46
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: baby
+        weight: 1
+      - path: daiper
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/chest
+        weight: 1
+      - path: root/chest/left_shoulder
+        weight: 1
+      - path: root/chest/left_shoulder/left_elbow
+        weight: 1
+      - path: root/chest/left_shoulder/left_elbow/left_hand
+        weight: 1
+      - path: root/chest/neck
+        weight: 1
+      - path: root/chest/neck/head
+        weight: 1
+      - path: root/chest/right_shoulder
+        weight: 1
+      - path: root/chest/right_shoulder/right_elbow
+        weight: 1
+      - path: root/chest/right_shoulder/right_elbow/right_hand
+        weight: 1
+      - path: root/daiper_right_1
+        weight: 1
+      - path: root/daiper_right_1/daiper_right_2
+        weight: 1
+      - path: root/daiper_right_1/daiper_right_2/daiper_right_3
+        weight: 1
+      - path: root/daiper_right_1/daiper_right_2/daiper_right_3/daiper_right_4
+        weight: 1
+      - path: root/diaper_left_1
+        weight: 1
+      - path: root/diaper_left_1/daiper_left_2
+        weight: 1
+      - path: root/diaper_left_1/daiper_left_2/daiper_left_3
+        weight: 1
+      - path: root/diaper_left_1/daiper_left_2/daiper_left_3/daiper_left_4
+        weight: 1
+      - path: root/left_hip
+        weight: 1
+      - path: root/left_hip/left_leg
+        weight: 1
+      - path: root/left_hip/left_leg/left_foot
+        weight: 1
+      - path: root/right_hip
+        weight: 1
+      - path: root/right_hip/right_leg
+        weight: 1
+      - path: root/right_hip/right_leg/right_foot
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
