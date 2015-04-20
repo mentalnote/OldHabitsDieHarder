@@ -563,9 +563,19 @@ Prefab:
       value: 
       objectReference: {fileID: 11463014, guid: 12eaf9548409f174fb763447581749f9,
         type: 2}
+    - target: {fileID: 11481134, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: firstPersonController
+      value: 
+      objectReference: {fileID: 591835433}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &591835433
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11478996, guid: 1cb2378714ea144b49063219b2de6cd7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1932070767}
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
 --- !u!1 &1047192384
 GameObject:
   m_ObjectHideFlags: 0
