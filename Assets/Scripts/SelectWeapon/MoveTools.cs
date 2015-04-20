@@ -59,6 +59,12 @@ public sealed class MoveTools : MonoBehaviour
 
     private void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            this.Move();
+        }
+
         this.root.anchoredPosition = new Vector2(
             Screen.width * this.normalizedPosition.x,
             Screen.height * this.normalizedPosition.y);
