@@ -127,7 +127,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 80577a73934cd0a4f8fd6eb31e2e411e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -216,7 +216,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 80577a73934cd0a4f8fd6eb31e2e411e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -286,7 +286,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 406038, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11412210, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
       propertyPath: idleAnimClip
@@ -419,7 +419,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 499014, guid: f0af20d495a75a047865da45ba6eedaf, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0af20d495a75a047865da45ba6eedaf, type: 2}
@@ -600,7 +600,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 80577a73934cd0a4f8fd6eb31e2e411e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -713,7 +713,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 475894, guid: 1cb2378714ea144b49063219b2de6cd7, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 151306, guid: 1cb2378714ea144b49063219b2de6cd7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb2378714ea144b49063219b2de6cd7, type: 2}
@@ -755,7 +759,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22459364, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 22459364, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -841,6 +845,10 @@ Prefab:
       propertyPath: firstPersonController
       value: 
       objectReference: {fileID: 440200961}
+    - target: {fileID: 110516, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
   m_IsPrefabParent: 0
@@ -881,7 +889,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22414754, guid: 61a9e5c4c2f050844a8ea363cbababf7, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22414754, guid: 61a9e5c4c2f050844a8ea363cbababf7, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -957,7 +965,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198790317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.178409576, y: -.0642041937, z: -1.84942865}
+  m_LocalPosition: {x: -.178000003, y: -.00899999961, z: -1.84899998}
   m_LocalScale: {x: 7.15999985, y: .100000001, z: 5.57000017}
   m_Children: []
   m_Father: {fileID: 1844122156}
@@ -972,7 +980,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 80577a73934cd0a4f8fd6eb31e2e411e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1042,7 +1050,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420950, guid: 55220f1c78b199645aa11dd697607c4a, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11485522, guid: 55220f1c78b199645aa11dd697607c4a, type: 2}
       propertyPath: babyFood
@@ -1153,7 +1161,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 80577a73934cd0a4f8fd6eb31e2e411e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1226,7 +1234,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 80577a73934cd0a4f8fd6eb31e2e411e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1296,7 +1304,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 371dd7003e1868d48a83556e3b712c18, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 371dd7003e1868d48a83556e3b712c18, type: 3}
       propertyPath: m_LocalScale.x
