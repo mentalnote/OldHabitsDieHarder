@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 791f6b9288cb44f4ca2804daed89dcdc
+timeCreated: 1429519335
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bookcase
+    100004: door
+    100006: fan
+    100008: fan1
+    100010: fan2
+    100012: left_window
+    100014: left_window_background
+    100016: left_window_left_curtain
+    100018: left_window_right_curtain
+    100020: light
+    100022: light_switch
+    100024: pCube48
+    100026: pCube51
+    100028: right_window
+    100030: right_window_background
+    100032: right_window_left_curtain
+    100034: right_window_right_curtain
+    100036: table
+    400000: //RootNode
+    400002: bookcase
+    400004: door
+    400006: fan
+    400008: fan1
+    400010: fan2
+    400012: left_window
+    400014: left_window_background
+    400016: left_window_left_curtain
+    400018: left_window_right_curtain
+    400020: light
+    400022: light_switch
+    400024: pCube48
+    400026: pCube51
+    400028: right_window
+    400030: right_window_background
+    400032: right_window_left_curtain
+    400034: right_window_right_curtain
+    400036: table
+    2300000: bookcase
+    2300002: door
+    2300004: fan
+    2300006: left_window
+    2300008: left_window_background
+    2300010: left_window_left_curtain
+    2300012: left_window_right_curtain
+    2300014: light
+    2300016: light_switch
+    2300018: pCube48
+    2300020: pCube51
+    2300022: right_window
+    2300024: right_window_background
+    2300026: right_window_left_curtain
+    2300028: right_window_right_curtain
+    2300030: table
+    3300000: bookcase
+    3300002: door
+    3300004: fan
+    3300006: left_window
+    3300008: left_window_background
+    3300010: left_window_left_curtain
+    3300012: left_window_right_curtain
+    3300014: light
+    3300016: light_switch
+    3300018: pCube48
+    3300020: pCube51
+    3300022: right_window
+    3300024: right_window_background
+    3300026: right_window_left_curtain
+    3300028: right_window_right_curtain
+    3300030: table
+    4300000: right_window_background
+    4300002: left_window_background
+    4300004: fan
+    4300006: right_window_left_curtain
+    4300008: right_window_right_curtain
+    4300010: left_window_right_curtain
+    4300012: left_window_left_curtain
+    4300014: light
+    4300016: door
+    4300018: table
+    4300020: light_switch
+    4300022: left_window
+    4300024: right_window
+    4300026: bookcase
+    4300028: pCube48
+    4300030: pCube51
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
