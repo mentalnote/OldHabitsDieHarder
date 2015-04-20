@@ -4,6 +4,9 @@ using System.Collections;
 public class Dog : MonoBehaviour
 {
     [SerializeField]
+    private AudioSource audio = null;
+
+    [SerializeField]
     private Hands playerHands = null;
 
     [SerializeField]
@@ -38,6 +41,8 @@ public class Dog : MonoBehaviour
             Instantiate(poopPrefab, this.transform.position + this.poopOffset, Quaternion.identity);
 
             this.hasPooped = true;
+
+            this.audio.Stop();
         }
     }
 
