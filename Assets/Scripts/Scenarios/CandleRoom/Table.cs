@@ -34,7 +34,6 @@ public class Table : MonoBehaviour {
                 if (chair.Broken)
                 {
                     this.GetComponent<Animation>().Play(moveAnimationName);
-                    Debug.Log(this.GetComponent<Animation>().clip.name);
 
                     moved = true;
 
