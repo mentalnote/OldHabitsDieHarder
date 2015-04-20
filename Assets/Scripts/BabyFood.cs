@@ -3,6 +3,9 @@ using System.Collections;
 
 public class BabyFood : MonoBehaviour {
 
+    [SerializeField]
+    private CharacterController playerCollider = null;
+
     public bool IsAttached { get; set; }
 
     public Transform AttachedTo { get; set; }
@@ -13,6 +16,8 @@ public class BabyFood : MonoBehaviour {
     {
         if (this.IsAttached && this.AttachedTo != null)
         {
+            Physics.IgnoreCollision(this.playerCollider, this.GetComponent<Collider>());
+
             this.transform.position = this.AttachedTo.position + this.AttachedTo.forward * 0.1f ;
         }
 

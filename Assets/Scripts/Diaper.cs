@@ -35,6 +35,12 @@ public class Diaper : MonoBehaviour {
                     this.anim.PlayQueued(this.idleAnimClip.name);
                     this.anim[this.idleAnimClip.name].wrapMode = WrapMode.Once;
                 }
+
+                Collider[] colliders = this.GetComponentsInChildren<Collider>();
+                for (int i = 0; i < colliders.Length; ++i)
+                {
+                    colliders[i].enabled = false;
+                }
             }
             
         }

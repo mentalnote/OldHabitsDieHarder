@@ -460,6 +460,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0af20d495a75a047865da45ba6eedaf, type: 2}
   m_IsPrefabParent: 0
+--- !u!143 &464361177
+CharacterController:
+  m_PrefabParentObject: {fileID: 14319028, guid: 1cb2378714ea144b49063219b2de6cd7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1160570801}
 --- !u!1 &536368894
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: 791f6b9288cb44f4ca2804daed89dcdc, type: 3}
@@ -700,6 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77968bb27b18f54b85f173e4be3dcc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCollider: {fileID: 464361177}
 --- !u!65 &1153436961
 BoxCollider:
   m_ObjectHideFlags: 0
