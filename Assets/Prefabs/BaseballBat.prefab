@@ -12,6 +12,8 @@ GameObject:
   - 23: {fileID: 2300130}
   - 111: {fileID: 11111454}
   - 64: {fileID: 6440186}
+  - 82: {fileID: 8227446}
+  - 114: {fileID: 11440184}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -28,7 +30,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 464802}
   - 114: {fileID: 11423768}
-  - 82: {fileID: 8271716}
   m_Layer: 0
   m_Name: BaseballBat
   m_TagString: Untagged
@@ -55,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .640913606, y: -.784544885, z: -1.20415354}
   m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
   m_Children:
   - {fileID: 422278}
@@ -105,12 +106,12 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 2061e2d26bfab97419d857002e27e3bf, type: 3}
---- !u!82 &8271716
+--- !u!82 &8227446
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194404}
+  m_GameObject: {fileID: 161594}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -118,7 +119,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -186,7 +187,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: a28d16d87f397f743a5d7efa243a0a87, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &11423768
@@ -204,8 +205,20 @@ MonoBehaviour:
   collider: {fileID: 6440186}
   animation: {fileID: 11111454}
   animClip: {fileID: 7400000, guid: a28d16d87f397f743a5d7efa243a0a87, type: 2}
-  soundSource: {fileID: 8271716}
+  soundSource: {fileID: 0}
   disable: 0
+--- !u!114 &11440184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfa296dc01a6344ca24cfff4dc81ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 8227446}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

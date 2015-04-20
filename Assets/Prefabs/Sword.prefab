@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 407426}
   - 114: {fileID: 11423168}
-  - 82: {fileID: 8285270}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -29,6 +28,8 @@ GameObject:
   - 23: {fileID: 2345240}
   - 111: {fileID: 11163008}
   - 65: {fileID: 6540480}
+  - 82: {fileID: 8275696}
+  - 114: {fileID: 11404286}
   m_Layer: 0
   m_Name: SwordMesh
   m_TagString: Untagged
@@ -43,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.02027559, y: -.810938656, z: -1.19953215}
   m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
   m_Children:
   - {fileID: 421816}
@@ -106,12 +107,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18.6632938, y: 4.12830639, z: 96.6428223}
   m_Center: {x: 0, y: 0, z: 37.2539978}
---- !u!82 &8285270
+--- !u!82 &8275696
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 108596}
+  m_GameObject: {fileID: 118776}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -119,7 +120,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -190,6 +191,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11404286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfa296dc01a6344ca24cfff4dc81ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 8275696}
 --- !u!114 &11423168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,7 +218,6 @@ MonoBehaviour:
   collider: {fileID: 6540480}
   animation: {fileID: 11163008}
   animClip: {fileID: 7400000, guid: 12ebd8ac2381c9949bb2e45684657cca, type: 2}
-  soundSource: {fileID: 8285270}
   disable: 0
 --- !u!1001 &100100000
 Prefab:

@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 458712}
   - 114: {fileID: 11434094}
-  - 82: {fileID: 8285746}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
@@ -29,6 +28,8 @@ GameObject:
   - 23: {fileID: 2353040}
   - 111: {fileID: 11130838}
   - 64: {fileID: 6426668}
+  - 82: {fileID: 8216674}
+  - 114: {fileID: 11496226}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -43,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .434876084, y: -.718920588, z: -.631104112}
   m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
   m_Children:
   - {fileID: 469790}
@@ -104,12 +105,12 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 76c1af58ffd57634693d6132c9b8760f, type: 3}
---- !u!82 &8285746
+--- !u!82 &8216674
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 158206}
+  m_GameObject: {fileID: 199844}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -117,7 +118,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -203,8 +204,20 @@ MonoBehaviour:
   collider: {fileID: 6426668}
   animation: {fileID: 11130838}
   animClip: {fileID: 7400000, guid: 90feca148fad0eb4c9b47e0f60e89ab2, type: 2}
-  soundSource: {fileID: 8285746}
+  soundSource: {fileID: 0}
   disable: 0
+--- !u!114 &11496226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfa296dc01a6344ca24cfff4dc81ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 8216674}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

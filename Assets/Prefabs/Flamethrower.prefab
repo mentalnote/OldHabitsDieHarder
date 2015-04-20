@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11402406}
   - 65: {fileID: 6557930}
   - 82: {fileID: 8268546}
+  - 111: {fileID: 11195706}
   m_Layer: 0
   m_Name: Flamethrower
   m_TagString: Untagged
@@ -197,6 +198,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &11195706
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135620}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11402406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,12 +227,12 @@ MonoBehaviour:
   collider: {fileID: 6557930}
   animation: {fileID: 0}
   animClip: {fileID: 0}
-  soundSource: {fileID: 8268546}
   disable: 0
   firePrefab: {fileID: 189328, guid: d6765531ba21dc74db34e5b18b61d1a0, type: 2}
   firePoint: {fileID: 141656}
   fireRate: 4
   firingForce: 500
+  flameThrowerAudio: {fileID: 8268546}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -15,18 +15,25 @@ public class Flamethrower : Weapon
     [SerializeField]
     private float firingForce = 10f;
 
+    [SerializeField]
+    private AudioSource flameThrowerAudio;
+
     private float timeTilNextFlame = 0.0f;
 
     private bool isFiring = false;
 
     public override void StartUseWeapon()
     {
-        isFiring = true;
+        base.StartUseWeapon();
+        this.flameThrowerAudio.Play();
+        this.isFiring = true;
     }
 
     public override void EndUseWeapon()
     {
-        isFiring = false;
+        base.EndUseWeapon();
+        this.flameThrowerAudio.Stop();
+        this.isFiring = false;
     }
 
     void Update ()
