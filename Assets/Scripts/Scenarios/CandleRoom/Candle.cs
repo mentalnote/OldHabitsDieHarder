@@ -3,6 +3,17 @@ using System.Collections;
 
 public class Candle : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject flame = null;
+
+    public GameObject Flame
+    {
+        get
+        {
+            return this.flame;
+        }
+    }
+
 	void OnCollisionEnter(Collision collision)
 	{
         Weapons weaponType = Weapon.GetWeaponType(collision.gameObject);

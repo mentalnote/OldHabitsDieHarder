@@ -29,6 +29,8 @@ public class Sprinkler : MonoBehaviour
         if (collider.GetComponent<Candle>() != null)
         {
             ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, CandleRoomScenario.Flags.CandleDoused, true);
+
+            GameObject.Destroy(collider.GetComponent<Candle>().Flame);
         }
     }
 }

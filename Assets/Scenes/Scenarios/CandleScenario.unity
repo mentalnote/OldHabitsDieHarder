@@ -1275,6 +1275,10 @@ Prefab:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 11429236, guid: 1af3017893c9e40819915c75a6647530, type: 2}
+      propertyPath: flame
+      value: 
+      objectReference: {fileID: 2038682900}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1af3017893c9e40819915c75a6647530, type: 2}
   m_IsPrefabParent: 0
@@ -2799,6 +2803,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1559738992}
   m_RootOrder: 3
+--- !u!1 &2038682900
+GameObject:
+  m_PrefabParentObject: {fileID: 134216, guid: 1af3017893c9e40819915c75a6647530, type: 2}
+  m_PrefabInternal: {fileID: 912287784}
 --- !u!1 &2072065689
 GameObject:
   m_ObjectHideFlags: 0
