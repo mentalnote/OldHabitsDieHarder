@@ -102,10 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c67cc5c50a72d841968e65897bddd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponType: BAT
+  weaponType: 4
   collider: {fileID: 6440186}
   animation: {fileID: 11111454}
   animClip: {fileID: 7400000, guid: a28d16d87f397f743a5d7efa243a0a87, type: 2}
+  disable: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

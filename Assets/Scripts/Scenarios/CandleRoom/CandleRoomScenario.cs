@@ -35,10 +35,10 @@ public class CandleRoomScenario : Scenario
 		);
 	}
 	
-	private void OnCandleDestroyed()
+	private void OnCandleDestroyed(int cause)
 	{
 		Debug.Log("YOU DESTROYED THE CANDLE!");
 		Debug.Log ("CURRENT SCENARIO: " + ScenarioManager.GetCurrentScenario());
-		ScenarioManager.GetCurrentScenario().LoseScenario(Weapons.Bat);
+		ScenarioManager.GetCurrentScenario().LoseScenario((Weapons)cause);
 	}
 }

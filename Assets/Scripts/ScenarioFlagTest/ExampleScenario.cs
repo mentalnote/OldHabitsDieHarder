@@ -44,17 +44,17 @@ public class ExampleScenario : Scenario
         );
     }
 
-    private void OnFirstTwoFlagsSet()
+    private void OnFirstTwoFlagsSet(int cause)
     {
         Debug.Log(System.DateTime.Now + " THE FIRST TWO FLAGS ARE SET!");
     }
 
-    private void OnFirstAndLastFlagsAreSet()
+    private void OnFirstAndLastFlagsAreSet(int cause)
     {
         Debug.Log("THE FIRST AND THE FIFTH FLAGS ARE SET!");
     }
 
-    private void OnSecondFlagIsSetButFourthFlagIsNot()
+    private void OnSecondFlagIsSetButFourthFlagIsNot(int cause)
     {
         Debug.Log("THE SECOND FLAG IS SET WHILE THE FOURTH IS NOT!");
     }

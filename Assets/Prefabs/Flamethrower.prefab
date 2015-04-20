@@ -138,10 +138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b1cb0780a539b45934669a74c2f666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponType: FLAMETHROWER
+  weaponType: 0
   collider: {fileID: 6557930}
   animation: {fileID: 0}
   animClip: {fileID: 0}
+  disable: 0
   firePrefab: {fileID: 189328, guid: d6765531ba21dc74db34e5b18b61d1a0, type: 2}
   firePoint: {fileID: 141656}
   fireRate: 4

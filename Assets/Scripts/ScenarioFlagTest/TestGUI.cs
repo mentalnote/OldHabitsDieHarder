@@ -6,43 +6,43 @@ public class TestGUI : MonoBehaviour
 	void OnGUI()
 	{
 		if (GUI.Button(new Rect(0, 0, 100, 100), "Set Flag 1")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagOne );
+			ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagOne, true );
 		}
 
 		if (GUI.Button(new Rect(100, 0, 100, 100), "Set Flag 2")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagTwo );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagTwo, true);
 		}
 
 		if (GUI.Button(new Rect(200, 0, 100, 100), "Set Flag 3")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagThree );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagThree, true);
 		}
 
 		if (GUI.Button(new Rect(300, 0, 100, 100), "Set Flag 4")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagFour );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagFour, true);
 		}
 
 		if (GUI.Button(new Rect(400, 0, 100, 100), "Set Flag 5")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagFive );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagFive, true);
 		}
 
 		if (GUI.Button(new Rect(0, 100, 100, 100), "Unset Flag 1")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagOne, false );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagOne, false);
 		}
 		
 		if (GUI.Button(new Rect(100, 100, 100, 100), "Unset Flag 2")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagTwo, false );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagTwo, false);
 		}
 		
 		if (GUI.Button(new Rect(200, 100, 100, 100), "Unset Flag 3")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagThree, false );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagThree, false);
 		}
 		
 		if (GUI.Button(new Rect(300, 100, 100, 100), "Unset Flag 4")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagFour, false );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagFour, false);
 		}
 		
 		if (GUI.Button(new Rect(400, 100, 100, 100), "Unset Flag 5")) {
-			ScenarioManager.GetCurrentScenario().SetFlag( ExampleScenario.Flags.FlagFive, false );
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, ExampleScenario.Flags.FlagFive, false);
 		}
 
 		string debugText = "";

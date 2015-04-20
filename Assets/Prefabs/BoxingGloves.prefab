@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c67cc5c50a72d841968e65897bddd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponType: BASE
+  weaponType: 3
   collider: {fileID: 6521094}
   animation: {fileID: 11124418}
   animClip: {fileID: 7400000, guid: f1d9b0ea8dfcb5a46a82f7b03589f808, type: 2}

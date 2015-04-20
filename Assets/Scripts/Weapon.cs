@@ -4,7 +4,7 @@ using System.Collections;
 public class Weapon : MonoBehaviour
 {
 
-    static public string GetWeaponType(GameObject o)
+    static public Weapons GetWeaponType(GameObject o)
     {
         Weapon w = o.GetComponent<Weapon>();
         if (w != null) {
@@ -12,11 +12,11 @@ public class Weapon : MonoBehaviour
         }
 
         //Not a weapon
-        return "";
+        return Weapons.None;
     }
 
     [SerializeField]
-    private string weaponType = "BASE";
+    private Weapons weaponType = Weapons.None;
 
     [SerializeField]
     private Collider collider;
@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private bool disable = false;
 
-    public string WeaponType
+    public Weapons WeaponType
     {
         get
         {

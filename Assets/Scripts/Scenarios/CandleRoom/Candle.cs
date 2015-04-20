@@ -5,8 +5,10 @@ public class Candle : MonoBehaviour
 {
 	void OnCollisionEnter(Collision collision)
 	{
-		if (Weapon.GetWeaponType(collision.gameObject) != "") {
-			ScenarioManager.GetCurrentScenario().SetFlag(CandleRoomScenario.Flags.CandleDestroyed);
+        Weapons weaponType = Weapon.GetWeaponType(collision.gameObject);
+        if (weaponType != Weapons.None)
+        {
+            ScenarioManager.GetCurrentScenario().SetFlag(weaponType, CandleRoomScenario.Flags.CandleDestroyed, true);
 		}
 	}
 }

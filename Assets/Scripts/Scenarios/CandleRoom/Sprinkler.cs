@@ -17,10 +17,10 @@ public class Sprinkler : MonoBehaviour
 		);
 	}
 
-	private void OnCurtainsOnFire()
+	private void OnCurtainsOnFire(int cause)
 	{
 		//Start the sprinkler
-		ScenarioManager.GetCurrentScenario().SetFlag(CandleRoomScenario.Flags.SprinklersOn);
+        ScenarioManager.GetCurrentScenario().SetFlag(cause, CandleRoomScenario.Flags.SprinklersOn, true);
 		GameObject.Instantiate(this.emitter);
 	}
 }

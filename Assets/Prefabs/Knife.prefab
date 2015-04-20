@@ -102,10 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c67cc5c50a72d841968e65897bddd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponType: KNIFE
+  weaponType: 2
   collider: {fileID: 6498974}
   animation: {fileID: 11144586}
   animClip: {fileID: 7400000, guid: 15ac36f7f90162844b82f9bace9da72a, type: 2}
+  disable: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

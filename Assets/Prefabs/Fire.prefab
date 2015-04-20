@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c67cc5c50a72d841968e65897bddd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponType: FIRE
+  weaponType: 0
   collider: {fileID: 6528316}
   animation: {fileID: 0}
   animClip: {fileID: 0}

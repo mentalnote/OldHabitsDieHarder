@@ -24,7 +24,7 @@ public class FlagsDebugDisplay : MonoBehaviour
 			string valName = System.Enum.Parse(this.enumType, val.ToString()).ToString();
 
 			//Determine whether or not the flag is set
-			bool flagSet = ScenarioManager.GetCurrentScenario().GetFlag(val);
+			bool flagSet = ScenarioManager.GetCurrentScenario().GetFlag(val).value;
 
 			//Append the line to the output
 			debugText += valName + ": " + (flagSet ? "Set" : "Unset") + "\n";

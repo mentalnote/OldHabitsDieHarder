@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 
 //Delegate for flag triggers
-public delegate void FlagTriggerDelegate();
+public delegate void FlagTriggerDelegate(int cause);
 
 abstract public class Scenario : MonoBehaviour
 {
@@ -26,13 +26,13 @@ abstract public class Scenario : MonoBehaviour
 
     //Keep track of whether or not we are in the middle of processing triggers
     private bool currentlyProcessingTriggers = false;
-    private Queue<KeyValuePair<int, bool>> queuedFlagChanges;
+    private Queue<KeyValuePair<int, FlagValue>> queuedFlagChanges;
 
     //Keep track of whether or not we have just won or lost, and are ignoring flag changes
     protected bool isScenarioOver = false;
 
     //Our flags
-    protected Dictionary<int, bool> flags;
+    protected Dictionary<int, FlagValue> flags;
 
     //Our flag triggers
     protected List<FlagTriggerDetails> flagTriggers;
@@ -41,14 +41,14 @@ abstract public class Scenario : MonoBehaviour
     protected void InitialiseScenario()
     {
         //Initialise the list of queued flag changes
-        this.queuedFlagChanges = new Queue<KeyValuePair<int, bool>>();
+        this.queuedFlagChanges = new Queue<KeyValuePair<int, FlagValue>>();
 
         //Initialise the list of flags
-        this.flags = new Dictionary<int, bool>();
+        this.flags = new Dictionary<int, FlagValue>();
         int[] flagKeys = EnumUtil.ArrayFromEnum(this.GetEnumType());
         foreach (int key in flagKeys)
         {
-            this.flags[key] = false;
+            this.flags[key] = new FlagValue(0, false);
         }
 
         //Initialise the list of flag triggers
@@ -66,13 +66,16 @@ abstract public class Scenario : MonoBehaviour
     }
 
     //Sets the value of a flag
-    public void SetFlag<T>(T flagKeyVal, bool value = true)
+    public void SetFlag<K, T>(K causeVal, T flagKeyVal, bool value)
     {
         //If the scenario is already over and we're waiting for a level load, ignore all flag changes
         if (this.isScenarioOver == true)
         {
             return;
         }
+
+        //Convert the cause to an int
+        int cause = (int)System.Convert.ChangeType(causeVal, typeof(int));
 
         //Convert the flag key value to an int
         int flagKey = (int)System.Convert.ChangeType(flagKeyVal, typeof(int));
@@ -86,23 +89,23 @@ abstract public class Scenario : MonoBehaviour
         //If we're in the middle of processing flag change triggers, queue any changes
         if (this.currentlyProcessingTriggers == true)
         {
-            this.queuedFlagChanges.Enqueue(new KeyValuePair<int, bool>(flagKey, value));
+            this.queuedFlagChanges.Enqueue(new KeyValuePair<int, FlagValue>(flagKey, new FlagValue(cause, value)));
             return;
         }
 
         //Set the flag value and process any triggers
-        this.flags[(int)flagKey] = value;
+        this.flags[(int)flagKey] = new FlagValue(cause, value);
         this.ProcessTriggers();
     }
 
     //Retrieves the value of a flag
-    public bool GetFlag<T>(T flagKey)
+    public FlagValue GetFlag<T>(T flagKey)
     {
         return this.GetFlag((int)System.Convert.ChangeType(flagKey, typeof(int)));
     }
 
     //Retrieves the value of a flag
-    public bool GetFlag(int flagKey)
+    public FlagValue GetFlag(int flagKey)
     {
         return this.flags[flagKey];
     }
@@ -173,23 +176,25 @@ abstract public class Scenario : MonoBehaviour
         int triggerIndex = 0;
         foreach (FlagTriggerDetails trigger in this.flagTriggers)
         {
+            int cause = 0;
             //Determine if the triggering flags that need to be set are set
             bool flagCriteriaMet = true;
             foreach (int flag in trigger.triggerFlagsSet)
             {
-                flagCriteriaMet = flagCriteriaMet && this.GetFlag(flag);
+                flagCriteriaMet = flagCriteriaMet && this.GetFlag(flag).value;
+                cause = this.GetFlag(flag).cause;
             }
 
             //Determine if the triggering flags that need to be unset are unset
             foreach (int flag in trigger.triggerFlagsUnset)
             {
-                flagCriteriaMet = flagCriteriaMet && (this.GetFlag(flag) == false);
+                flagCriteriaMet = flagCriteriaMet && (this.GetFlag(flag).value == false);
             }
 
             //If all of the flags are set, call the handler
             if (flagCriteriaMet == true)
             {
-                trigger.handler();
+                trigger.handler(cause);
 
                 //If the handler was a one-shot, mark it for removal
                 if (trigger.isOneShot)
@@ -211,8 +216,8 @@ abstract public class Scenario : MonoBehaviour
         this.currentlyProcessingTriggers = false;
         while (this.queuedFlagChanges.Count > 0)
         {
-            KeyValuePair<int, bool> currPair = this.queuedFlagChanges.Dequeue();
-            this.SetFlag(currPair.Key, currPair.Value);
+            KeyValuePair<int, FlagValue> currPair = this.queuedFlagChanges.Dequeue();
+            this.SetFlag(currPair.Value.cause, currPair.Key, true);
         }
     }
 
@@ -222,4 +227,16 @@ abstract public class Scenario : MonoBehaviour
 
     //Returns the enum type used for our flags
     abstract protected System.Type GetEnumType();
+
+    public struct FlagValue
+    {
+        public int cause;
+        public bool value;
+
+        public FlagValue(int cause, bool value)
+        {
+            this.cause = cause;
+            this.value = value;
+        }
+    }
 }

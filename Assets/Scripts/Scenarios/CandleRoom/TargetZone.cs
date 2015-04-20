@@ -7,7 +7,7 @@ public class TargetZone : MonoBehaviour
 	{
 		//If the table entered the target zone, set the flag accordingly
 		if (other.gameObject.tag == "Table") {
-			ScenarioManager.GetCurrentScenario().SetFlag(CandleRoomScenario.Flags.TableInPosition, true);
+			ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, CandleRoomScenario.Flags.TableInPosition, true);
 		}
 	}
 
@@ -15,7 +15,7 @@ public class TargetZone : MonoBehaviour
 	{
 		//If the table left the target zone, set the flag accordingly
 		if (other.gameObject.tag == "Table") {
-			ScenarioManager.GetCurrentScenario().SetFlag(CandleRoomScenario.Flags.TableInPosition, false);
+			ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, CandleRoomScenario.Flags.TableInPosition, false);
 		}
 	}
 }
