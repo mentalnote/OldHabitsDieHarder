@@ -527,6 +527,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11422178, guid: b693eace3c7a4c8479ae11f71beea023,
         type: 2}
+    - target: {fileID: 11481134, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: firstPersonController
+      value: 
+      objectReference: {fileID: 1841276444}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
   m_IsPrefabParent: 0
@@ -673,7 +677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d57b51d8a0bca488ca40dadaf7cd6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenario: {fileID: 1731706999}
   anim: {fileID: 1244239436}
   animClip: {fileID: 7400000, guid: 61f8e24ba19601d479c414f4c1417dd8, type: 3}
 --- !u!111 &1244239436
@@ -923,6 +926,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f63c57a5543cf40b00f3a19a251245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1841276444 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11478996, guid: 1cb2378714ea144b49063219b2de6cd7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1160570801}
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
 --- !u!1 &1844122155
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+using UnityStandardAssets.Characters.FirstPerson;
+
 public sealed class MoveTools : MonoBehaviour
 {
     [SerializeField]
@@ -18,6 +20,9 @@ public sealed class MoveTools : MonoBehaviour
 
     [SerializeField]
     private Sprite hideButton;
+
+    [SerializeField]
+    private FirstPersonController firstPersonController;
 
     public Vector2 NormalizedPosition
     {
@@ -49,6 +54,7 @@ public sealed class MoveTools : MonoBehaviour
     {
         this.normalizedPosition = this.show ? new Vector2(0, 0) : new Vector2(0, -0.75f);
         this.buttonImage.overrideSprite = this.show ? this.hideButton : this.showButton;
+        this.firstPersonController.enabled = !this.show;
         this.show = !this.show;
     }
 
@@ -60,7 +66,7 @@ public sealed class MoveTools : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(1))
         {
             this.Move();
         }
