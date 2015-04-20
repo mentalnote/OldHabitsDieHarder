@@ -56,7 +56,7 @@ public class Hands : MonoBehaviour
     }
 
 	private void Update () {
-        if (this.heldWeapon != null)
+        if (this.heldWeapon != null && this.fpsController.enabled)
         {
             if (Input.GetMouseButtonDown(0))
             {

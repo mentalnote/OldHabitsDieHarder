@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872413ecaded843aca7ac4df1ae930d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinal: 0
   endingText: {fileID: 2024658033}
 --- !u!4 &261184394
 Transform:
@@ -718,7 +719,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: .5
   m_Range: 70.4526672
   m_SpotAngle: 30
   m_CookieSize: 10
