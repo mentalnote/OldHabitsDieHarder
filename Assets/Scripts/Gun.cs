@@ -15,20 +15,25 @@ public class Gun : Weapon {
     [SerializeField]
     private float firingForce = 10f;
 
+    [SerializeField]
+    private AudioSource gunFireAudio;
+
     private float timeTilNextShot = 0.0f;
 
     private bool isFiring = false;
 
     public override void StartUseWeapon()
     {
-        this.StartPlayWeaponAnim();
-        isFiring = true;
+        base.StartUseWeapon();
+        this.gunFireAudio.Play();
+        this.isFiring = true;
     }
 
     public override void EndUseWeapon()
     {
-        this.StopPlayWeaponAnim();
-        isFiring = false;
+        base.EndUseWeapon();
+        this.gunFireAudio.Stop();
+        this.isFiring = false;
     }
 
     void Update()
