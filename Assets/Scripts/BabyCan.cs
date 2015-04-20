@@ -13,15 +13,13 @@ public class BabyCan : MonoBehaviour {
 
     private bool isAttached = false;
 
-    private Vector3 offset = Vector3.zero;
-
     private Transform attachedTo;
 
     private void Update()
     {
         if (this.isAttached && this.attachedTo != null)
         {
-            this.transform.position = this.attachedTo.position + this.offset;
+            this.transform.position = this.attachedTo.position;
         }
     }
 
@@ -35,7 +33,6 @@ public class BabyCan : MonoBehaviour {
             if (weapon != null)
             {
                 this.attachedTo = weapon.transform;
-                this.offset = weapon.transform.position - collision.contacts[0].point;
                 this.isAttached = true;
             }
         }
