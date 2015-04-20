@@ -23,4 +23,12 @@ public class Sprinkler : MonoBehaviour
         ScenarioManager.GetCurrentScenario().SetFlag(cause, CandleRoomScenario.Flags.SprinklersOn, true);
 		GameObject.Instantiate(this.emitter);
 	}
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.GetComponent<Candle>() != null)
+        {
+            ScenarioManager.GetCurrentScenario().SetFlag(Weapons.None, CandleRoomScenario.Flags.CandleDestroyed, true);
+        }
+    }
 }

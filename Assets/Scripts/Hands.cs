@@ -21,6 +21,8 @@ public class Hands : MonoBehaviour
 
     public Vector3 Position { get; set; }
 
+    private float weaponUseMinimumTime = 0.0f;
+
     public Weapon HeldWeapon
     {
         get
@@ -59,11 +61,18 @@ public class Hands : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 this.heldWeapon.StartUseWeapon();
+
+                this.weaponUseMinimumTime = 1.0f;
             }
-            else if (Input.GetMouseButtonUp(0))
+            else if (this.weaponUseMinimumTime <= 0.0f && !Input.GetMouseButton(0))
             {
                 this.heldWeapon.EndUseWeapon();
             }
+        }
+
+        if (this.weaponUseMinimumTime > 0.0f)
+        {
+            this.weaponUseMinimumTime -= Time.deltaTime;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -77,7 +86,7 @@ public class Hands : MonoBehaviour
             this.fpsController.MouseLook.YSensitivity = 2f;
         }
 
-        this.Position = this.camera.ScreenPointToRay(Input.mousePosition).GetPoint(this.heldWeaponOffset);
+        this.Position = this.camera.ScreenPointToRay(Input.mousePosition * 0.5f + new Vector3(Screen.width * 0.25f, Screen.height * 0.25f, 0.0f)).GetPoint(this.heldWeaponOffset);
 
         if (this.handObject != null)
         {

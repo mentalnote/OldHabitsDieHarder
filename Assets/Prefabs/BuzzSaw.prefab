@@ -39,6 +39,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 486756}
   - 111: {fileID: 11188300}
+  - 114: {fileID: 11463014}
   m_Layer: 0
   m_Name: BuzzSaw
   m_TagString: Untagged
@@ -136,7 +137,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 6d5eee9a72771bd4f94e96c01ef66f85, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 6d5eee9a72771bd4f94e96c01ef66f85, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -152,10 +154,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c67cc5c50a72d841968e65897bddd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponType: BUZZSAW
+  weaponType: 8
   collider: {fileID: 6442014}
   animation: {fileID: 11188300}
   animClip: {fileID: 7400000, guid: 6d5eee9a72771bd4f94e96c01ef66f85, type: 2}
+  disable: 0
+--- !u!114 &11463014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c67cc5c50a72d841968e65897bddd78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponType: 8
+  collider: {fileID: 6442014}
+  animation: {fileID: 11188300}
+  animClip: {fileID: 7400000, guid: 6d5eee9a72771bd4f94e96c01ef66f85, type: 2}
+  disable: 0
 --- !u!137 &13785790
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

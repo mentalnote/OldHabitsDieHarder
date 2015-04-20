@@ -10,6 +10,7 @@ public class CandleRoomScenario : Scenario
 		LeftCurtainOnFire,
 		RightCurtainOnFire,
 		SprinklersOn,
+        ChairDestroyed,
 		TableInPosition,
 		CandleDestroyed
 	};

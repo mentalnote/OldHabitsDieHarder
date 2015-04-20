@@ -6,8 +6,8 @@ public class Weapon : MonoBehaviour
 
     static public Weapons GetWeaponType(GameObject o)
     {
-        Weapon w = o.GetComponent<Weapon>();
-        if (w != null) {
+        Weapon w = o.GetComponentInChildren<Weapon>();
+        if (w != null || (w = o.GetComponentInParent<Weapon>()) != null) {
             return w.weaponType;
         }
 

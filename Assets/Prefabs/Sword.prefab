@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &108596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 407426}
+  - 114: {fileID: 11423168}
+  m_Layer: 0
+  m_Name: Sword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &118776
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,17 +26,28 @@ GameObject:
   - 4: {fileID: 421816}
   - 33: {fileID: 3337456}
   - 23: {fileID: 2345240}
-  - 95: {fileID: 9590784}
-  - 114: {fileID: 11423168}
-  - 64: {fileID: 6422680}
   - 111: {fileID: 11163008}
+  - 65: {fileID: 6540480}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: SwordMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &407426
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
+  m_Children:
+  - {fileID: 421816}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &421816
 Transform:
   m_ObjectHideFlags: 1
@@ -29,9 +56,9 @@ Transform:
   m_GameObject: {fileID: 118776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 407426}
   m_RootOrder: 0
 --- !u!23 &2345240
 MeshRenderer:
@@ -66,8 +93,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118776}
   m_Mesh: {fileID: 4300000, guid: 2d4fb027116b3fa4a8343f903a79ef8d, type: 3}
---- !u!64 &6422680
-MeshCollider:
+--- !u!65 &6540480
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,25 +103,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: 2d4fb027116b3fa4a8343f903a79ef8d, type: 3}
---- !u!95 &9590784
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118776}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2d4fb027116b3fa4a8343f903a79ef8d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8bb7e9870e6a48747a838f1045eecf11, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Size: {x: 18.6632938, y: 4.12830639, z: 96.6428223}
+  m_Center: {x: 0, y: 0, z: 37.2539978}
 --- !u!111 &11163008
 Animation:
   m_ObjectHideFlags: 1
@@ -115,14 +125,14 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118776}
+  m_GameObject: {fileID: 108596}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c67cc5c50a72d841968e65897bddd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: 6
-  collider: {fileID: 6422680}
+  collider: {fileID: 6540480}
   animation: {fileID: 11163008}
   animClip: {fileID: 7400000, guid: 12ebd8ac2381c9949bb2e45684657cca, type: 2}
   disable: 0
@@ -135,5 +145,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 118776}
+  m_RootGameObject: {fileID: 108596}
   m_IsPrefabParent: 1
