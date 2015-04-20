@@ -11,7 +11,7 @@ public class BabyCan : MonoBehaviour {
 
     private bool isOpened = false;
 
-    private bool isAttached = false;
+    private bool isAttached = false; 
 
     private Transform attachedTo;
 
