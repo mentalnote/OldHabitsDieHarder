@@ -26,6 +26,9 @@ abstract public class Scenario : MonoBehaviour
     }
 
     [SerializeField]
+    private bool isFinal = false;
+
+    [SerializeField]
     private Text endingText = null;
 
     //Keep track of whether or not we are in the middle of processing triggers
@@ -131,7 +134,7 @@ abstract public class Scenario : MonoBehaviour
             //...
 
             //Delay before the level load, so the player can see the transition
-            Timer.SetTimer(NarratorLibrary.PlayNarration(null, NarratorLibrary.GetWinNarration()), this.gameObject, delegate()
+            Timer.SetTimer(NarratorLibrary.PlayNarration(null, this.isFinal ? Narration.GameWin : NarratorLibrary.GetWinNarration()), this.gameObject, delegate()
             {
                 //Load the next level
                 Application.LoadLevel(Application.loadedLevel + 1);
