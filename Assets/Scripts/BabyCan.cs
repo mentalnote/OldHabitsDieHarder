@@ -9,19 +9,14 @@ public class BabyCan : MonoBehaviour {
     [SerializeField]
     private AnimationClip animClip;
 
+    [SerializeField]
+    private BabyFood babyFood;
+
     private bool isOpened = false;
 
-    private bool isAttached = false; 
 
-    private Transform attachedTo;
 
-    private void Update()
-    {
-        if (this.isAttached && this.attachedTo != null)
-        {
-            this.transform.position = this.attachedTo.position;
-        }
-    }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -30,10 +25,11 @@ public class BabyCan : MonoBehaviour {
         if (this.isOpened && hitBy == Weapons.Bottle && collision.transform != this.transform.parent)
         {
             Weapon weapon = collision.gameObject.GetComponentInChildren<Weapon>();
-            if (weapon != null)
+            if (weapon != null && this.babyFood != null)
             {
-                this.attachedTo = weapon.transform;
-                this.isAttached = true;
+                this.babyFood.AttachedTo = weapon.transform;
+                this.babyFood.IsAttached = true;
+                this.babyFood.AttachedToWeapon = weapon;
             }
         }
         else if (!this.isOpened && hitBy == Weapons.Chainsaw)
@@ -49,15 +45,6 @@ public class BabyCan : MonoBehaviour {
         else if (hitBy != Weapons.Bottle && hitBy != Weapons.Chainsaw && hitBy != Weapons.None)
         {
             ScenarioManager.GetCurrentScenario().SetFlag<Weapons, BabyScenario.Flags>(hitBy, BabyScenario.Flags.FoodDestroyed, true);
-        }
-        else
-        {
-            BabyRage babyRage = collision.gameObject.GetComponent<BabyRage>();
-            if (babyRage != null)
-            {
-                ScenarioManager.GetCurrentScenario().SetFlag<Weapons, BabyScenario.Flags>(Weapons.None, BabyScenario.Flags.BabyFed, true);
-                Destroy(this.gameObject);
-            }
         }
     }
 }
