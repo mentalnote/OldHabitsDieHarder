@@ -649,7 +649,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 28.2307281, y: 157.356918, z: 169.944275}
   m_Center: {x: 3.726686, y: 78.5340195, z: -1.8467598}
---- !u!1 &1153436959 stripped
+--- !u!1 &1153436959
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 371dd7003e1868d48a83556e3b712c18, type: 3}
   m_PrefabInternal: {fileID: 1688802472}
