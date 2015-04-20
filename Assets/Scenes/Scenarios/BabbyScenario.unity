@@ -292,16 +292,97 @@ Prefab:
       propertyPath: idleAnimClip
       value: 
       objectReference: {fileID: 7400000, guid: 280350ed64c98fe4cb0b08dc2488f82e, type: 3}
+    - target: {fileID: 11413564, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 229878855}
+    - target: {fileID: 11412210, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 229878855}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &440200961 stripped
+--- !u!1 &229878854
+GameObject:
+  m_PrefabParentObject: {fileID: 130016, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+  m_PrefabInternal: {fileID: 229878853}
+--- !u!82 &229878855
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229878854}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 84acd0a62f9b99c4cb189ae6e899b059, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &440200961
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11478996, guid: 1cb2378714ea144b49063219b2de6cd7,
     type: 2}
   m_PrefabInternal: {fileID: 1160570801}
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
---- !u!1 &536368894 stripped
+--- !u!1 &536368894
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: 791f6b9288cb44f4ca2804daed89dcdc, type: 3}
   m_PrefabInternal: {fileID: 1483265613}

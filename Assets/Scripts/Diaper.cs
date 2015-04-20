@@ -4,6 +4,9 @@ using System.Collections;
 public class Diaper : MonoBehaviour {
 
     [SerializeField]
+    private AudioSource audio = null;
+
+    [SerializeField]
     private Animation anim;
 
     [SerializeField]
@@ -18,6 +21,8 @@ public class Diaper : MonoBehaviour {
 
         if (hitBy == Weapons.Knife)
         {
+            this.audio.Stop();
+
             ScenarioManager.GetCurrentScenario().SetFlag<Weapons, BabyScenario.Flags>(Weapons.Knife, BabyScenario.Flags.BabyChanged, true);
             if (this.anim != null && this.animClip != null)
             {

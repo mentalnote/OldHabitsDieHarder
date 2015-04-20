@@ -4,6 +4,9 @@ using System.Collections;
 public class BabyRage : MonoBehaviour {
 
     [SerializeField]
+    private AudioSource audio = null;
+
+    [SerializeField]
     private Animation anim;
 
     [SerializeField]
@@ -27,6 +30,8 @@ public class BabyRage : MonoBehaviour {
             ScenarioManager.GetCurrentScenario().SetFlag<Weapons, BabyScenario.Flags>(hitBy, BabyScenario.Flags.BabyPopped, true);
             if (this.anim != null)
             {
+                this.audio.Stop();
+
                 this.anim.Stop();
                 Destroy(this.anim);
             }
