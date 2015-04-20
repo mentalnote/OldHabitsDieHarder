@@ -28,6 +28,9 @@ public class Weapon : MonoBehaviour
     private AnimationClip animClip;
 
     [SerializeField]
+    private AudioSource soundSource = null;
+
+    [SerializeField]
     private bool disable = false;
 
     public Weapons WeaponType
@@ -67,12 +70,14 @@ public class Weapon : MonoBehaviour
     public virtual void StartUseWeapon()
     {
         this.ColliderEnabled = true;
+        this.soundSource.Play();
         this.StartPlayWeaponAnim();
     }
 
     public virtual void EndUseWeapon()
     {
         this.StopPlayWeaponAnim();
+        this.soundSource.Play();
         this.ColliderEnabled = false;
     }
 

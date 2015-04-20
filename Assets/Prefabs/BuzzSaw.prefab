@@ -40,6 +40,7 @@ GameObject:
   - 4: {fileID: 486756}
   - 111: {fileID: 11188300}
   - 114: {fileID: 11463014}
+  - 82: {fileID: 8298644}
   m_Layer: 0
   m_Name: BuzzSaw
   m_TagString: Untagged
@@ -128,6 +129,75 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: bbd42f5c75c4c6247b2d20a29a9214d4, type: 3}
+--- !u!82 &8298644
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169750}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d652de9e2b3c5a547a8279e908cf2be5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!111 &11188300
 Animation:
   m_ObjectHideFlags: 1
@@ -158,6 +228,7 @@ MonoBehaviour:
   collider: {fileID: 6442014}
   animation: {fileID: 11188300}
   animClip: {fileID: 7400000, guid: 6d5eee9a72771bd4f94e96c01ef66f85, type: 2}
+  soundSource: {fileID: 0}
   disable: 0
 --- !u!114 &11463014
 MonoBehaviour:
@@ -174,6 +245,7 @@ MonoBehaviour:
   collider: {fileID: 6442014}
   animation: {fileID: 11188300}
   animClip: {fileID: 7400000, guid: 6d5eee9a72771bd4f94e96c01ef66f85, type: 2}
+  soundSource: {fileID: 8298644}
   disable: 0
 --- !u!137 &13785790
 SkinnedMeshRenderer:
