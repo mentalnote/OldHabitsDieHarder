@@ -9,16 +9,6 @@ public class BabyFood : MonoBehaviour {
 
     public Weapon AttachedToWeapon { get; set; }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        BabyRage babyRage = collision.gameObject.GetComponent<BabyRage>();
-        if (babyRage != null)
-        {
-            ScenarioManager.GetCurrentScenario().SetFlag<Weapons, BabyScenario.Flags>(Weapons.None, BabyScenario.Flags.BabyFed, true);
-            Destroy(this.gameObject);
-        }
-    }
-
     private void Update()
     {
         if (this.IsAttached && this.AttachedTo != null)

@@ -300,6 +300,42 @@ Prefab:
       propertyPath: audio
       value: 
       objectReference: {fileID: 229878855}
+    - target: {fileID: 13694318, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: m_Radius
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 13694318, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: m_Height
+      value: 15.1700001
+      objectReference: {fileID: 0}
+    - target: {fileID: 13637062, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: m_Radius
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 13637062, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: m_Height
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 13600496, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: m_Radius
+      value: .0250000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 13600496, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: m_Height
+      value: .119999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 13632520, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: m_Radius
+      value: .0250000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 13632520, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: m_Height
+      value: .119999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413564, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
+      propertyPath: babyFood
+      value: 
+      objectReference: {fileID: 1153436960}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 542fb2dd345b2bd48890b00f122ee07d, type: 2}
   m_IsPrefabParent: 0
