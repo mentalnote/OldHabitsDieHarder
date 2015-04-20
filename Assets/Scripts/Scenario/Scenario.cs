@@ -119,14 +119,11 @@ abstract public class Scenario : MonoBehaviour
             //Set the "scenario over" flag
             this.isScenarioOver = true;
 
-            //Play the narrator's sound clip
-            NarratorLibrary.PlayNarration(null, NarratorLibrary.GetWinNarration());
-
             //Show the "scenario won" text
             //...
 
             //Delay before the level load, so the player can see the transition
-            Timer.SetTimer(7.0f, this.gameObject, delegate()
+            Timer.SetTimer(NarratorLibrary.PlayNarration(null, NarratorLibrary.GetWinNarration()), this.gameObject, delegate()
             {
                 //Load the next level
                 Application.LoadLevel(Application.loadedLevel + 1);
@@ -143,14 +140,11 @@ abstract public class Scenario : MonoBehaviour
             //Set the "scenario over" flag
             this.isScenarioOver = true;
 
-            //Play the narrator's sound clip
-            NarratorLibrary.PlayNarration(null, NarratorLibrary.GetFailNarration(loserWeapon));
-
             //Show the "scenario lost" text
             //...
 
             //Delay before the level load, so the player can see the transition
-            Timer.SetTimer(5.0f, this.gameObject, delegate()
+            Timer.SetTimer(NarratorLibrary.PlayNarration(null, NarratorLibrary.GetFailNarration(loserWeapon)), this.gameObject, delegate()
             {
                 //Restart the level
                 Application.LoadLevel(Application.loadedLevel);

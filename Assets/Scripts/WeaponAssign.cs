@@ -5,7 +5,6 @@ using System.Collections;
 
 public class WeaponAssign : MonoBehaviour
 {
-
     [SerializeField]
     private Hands hands;
 
