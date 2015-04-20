@@ -79,13 +79,10 @@ public class Hands : MonoBehaviour
 
         this.Position = this.camera.ScreenPointToRay(Input.mousePosition).GetPoint(this.heldWeaponOffset);
 
-        if (this.handObject == null)
+        if (this.handObject != null)
         {
             this.heldWeapon.transform.position = this.Position;
-        }
-        else
-        {
-            this.handObject.transform.position = this.Position;
+            this.heldWeapon.transform.forward = camera.transform.forward;
         }
     }
 }
