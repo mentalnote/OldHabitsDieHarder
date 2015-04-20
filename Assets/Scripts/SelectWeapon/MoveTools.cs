@@ -66,7 +66,7 @@ public sealed class MoveTools : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(1))
         {
             this.Move();
         }
