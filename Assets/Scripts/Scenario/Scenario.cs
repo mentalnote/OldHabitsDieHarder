@@ -7,214 +7,219 @@ public delegate void FlagTriggerDelegate();
 
 abstract public class Scenario : MonoBehaviour
 {
-	//Helper class for representing a flag trigger
-	protected class FlagTriggerDetails
-	{
-		public FlagTriggerDetails(int[] triggerFlagsSet, int[] triggerFlagsUnset, FlagTriggerDelegate handler, bool isOneShot)
-		{
-			this.triggerFlagsSet = triggerFlagsSet;
-			this.triggerFlagsUnset = triggerFlagsUnset;
-			this.handler = handler;
-			this.isOneShot = isOneShot;
-		}
+    //Helper class for representing a flag trigger
+    protected class FlagTriggerDetails
+    {
+        public FlagTriggerDetails(int[] triggerFlagsSet, int[] triggerFlagsUnset, FlagTriggerDelegate handler, bool isOneShot)
+        {
+            this.triggerFlagsSet = triggerFlagsSet;
+            this.triggerFlagsUnset = triggerFlagsUnset;
+            this.handler = handler;
+            this.isOneShot = isOneShot;
+        }
 
-		public int[] triggerFlagsSet;
-		public int[] triggerFlagsUnset;
-		public FlagTriggerDelegate handler;
-		public bool isOneShot;
-	}
+        public int[] triggerFlagsSet;
+        public int[] triggerFlagsUnset;
+        public FlagTriggerDelegate handler;
+        public bool isOneShot;
+    }
 
-	//Keep track of whether or not we are in the middle of processing triggers
-	private bool currentlyProcessingTriggers = false;
-	private Queue< KeyValuePair<int, bool> > queuedFlagChanges;
+    //Keep track of whether or not we are in the middle of processing triggers
+    private bool currentlyProcessingTriggers = false;
+    private Queue<KeyValuePair<int, bool>> queuedFlagChanges;
 
-	//Keep track of whether or not we have just won or lost, and are ignoring flag changes
-	protected bool isScenarioOver = false;
+    //Keep track of whether or not we have just won or lost, and are ignoring flag changes
+    protected bool isScenarioOver = false;
 
-	//Our flags
-	protected Dictionary<int, bool> flags;
+    //Our flags
+    protected Dictionary<int, bool> flags;
 
-	//Our flag triggers
-	protected List<FlagTriggerDetails> flagTriggers;
+    //Our flag triggers
+    protected List<FlagTriggerDetails> flagTriggers;
 
-	//This method needs to be called in the Awake() or Start() method of every concrete subclass
-	protected void InitialiseScenario()
-	{
-		//Initialise the list of queued flag changes
-		this.queuedFlagChanges = new Queue<KeyValuePair<int, bool>>();
+    //This method needs to be called in the Awake() or Start() method of every concrete subclass
+    protected void InitialiseScenario()
+    {
+        //Initialise the list of queued flag changes
+        this.queuedFlagChanges = new Queue<KeyValuePair<int, bool>>();
 
-		//Initialise the list of flags
-		this.flags = new Dictionary<int, bool>();
-		int[] flagKeys = EnumUtil.ArrayFromEnum( this.GetEnumType() );
-		foreach (int key in flagKeys) {
-			this.flags[key] = false;
-		}
+        //Initialise the list of flags
+        this.flags = new Dictionary<int, bool>();
+        int[] flagKeys = EnumUtil.ArrayFromEnum(this.GetEnumType());
+        foreach (int key in flagKeys)
+        {
+            this.flags[key] = false;
+        }
 
-		//Initialise the list of flag triggers
-		this.flagTriggers = new List<FlagTriggerDetails>();
+        //Initialise the list of flag triggers
+        this.flagTriggers = new List<FlagTriggerDetails>();
 
-		//When the scenario first becomes active, set it as the current scenario
-		ScenarioManager.SetCurrentScenario(this);
+        //When the scenario first becomes active, set it as the current scenario
+        ScenarioManager.SetCurrentScenario(this);
 
-		//If there is a flags debug instance present, set our enum type for it
-		FlagsDebugDisplay flagDebug = this.gameObject.GetComponent<FlagsDebugDisplay>();
-		if (flagDebug != null) {
-			flagDebug.enumType = this.GetEnumType();
-		}
-	}
+        //If there is a flags debug instance present, set our enum type for it
+        FlagsDebugDisplay flagDebug = this.gameObject.GetComponent<FlagsDebugDisplay>();
+        if (flagDebug != null)
+        {
+            flagDebug.enumType = this.GetEnumType();
+        }
+    }
 
-	//Sets the value of a flag
-	public void SetFlag<T>(T flagKeyVal, bool value = true)
-	{
-		//If the scenario is already over and we're waiting for a level load, ignore all flag changes
-		if (this.isScenarioOver == true) {
-			return;
-		}
+    //Sets the value of a flag
+    public void SetFlag<T>(T flagKeyVal, bool value = true)
+    {
+        //If the scenario is already over and we're waiting for a level load, ignore all flag changes
+        if (this.isScenarioOver == true)
+        {
+            return;
+        }
 
-		//Convert the flag key value to an int
-		int flagKey = (int)System.Convert.ChangeType(flagKeyVal, typeof(int));
-		
-		//Sanity check
-		if (!this.flags.ContainsKey((int)flagKey)) {
-			throw new System.IndexOutOfRangeException("Invalid flag: " + flagKey);
-		}
+        //Convert the flag key value to an int
+        int flagKey = (int)System.Convert.ChangeType(flagKeyVal, typeof(int));
 
-		//If we're in the middle of processing flag change triggers, queue any changes
-		if (this.currentlyProcessingTriggers == true)
-		{
-			this.queuedFlagChanges.Enqueue( new KeyValuePair<int,bool>(flagKey, value) );
-			return;
-		}
+        //Sanity check
+        if (!this.flags.ContainsKey((int)flagKey))
+        {
+            throw new System.IndexOutOfRangeException("Invalid flag: " + flagKey);
+        }
 
-		//Set the flag value and process any triggers
-		this.flags[(int)flagKey] = value;
-		this.ProcessTriggers();
-	}
+        //If we're in the middle of processing flag change triggers, queue any changes
+        if (this.currentlyProcessingTriggers == true)
+        {
+            this.queuedFlagChanges.Enqueue(new KeyValuePair<int, bool>(flagKey, value));
+            return;
+        }
 
-	//Retrieves the value of a flag
-	public bool GetFlag<T>(T flagKey) {
-		return this.GetFlag( (int)System.Convert.ChangeType(flagKey, typeof(int)) );
-	}
+        //Set the flag value and process any triggers
+        this.flags[(int)flagKey] = value;
+        this.ProcessTriggers();
+    }
 
-	//Retrieves the value of a flag
-	public bool GetFlag(int flagKey) {
-		return this.flags[flagKey];
-	}
+    //Retrieves the value of a flag
+    public bool GetFlag<T>(T flagKey)
+    {
+        return this.GetFlag((int)System.Convert.ChangeType(flagKey, typeof(int)));
+    }
 
-	//"Wins" the scenario
-	public void WinScenario()
-	{
-		//Prevent multiple successive calls to this method
-		if (this.isScenarioOver == false)
-		{
-			//Set the "scenario over" flag
-			this.isScenarioOver = true;
+    //Retrieves the value of a flag
+    public bool GetFlag(int flagKey)
+    {
+        return this.flags[flagKey];
+    }
 
-			//Play the narrator's sound clip
-			NarratorLibrary.PlayNarration(null, this.getScenarioWonNarration());
-		
-			//Show the "scenario won" text
-			//...
-		
-			//Delay before the level load, so the player can see the transition
-			Timer.SetTimer(5.0f, this.gameObject, delegate()
-			{
-				//Load the next level
-				Application.LoadLevel(Application.loadedLevel + 1);
-			});
-		}
-	}
+    //"Wins" the scenario
+    public void WinScenario()
+    {
+        //Prevent multiple successive calls to this method
+        if (this.isScenarioOver == false)
+        {
+            //Set the "scenario over" flag
+            this.isScenarioOver = true;
 
-	//"Loses" the scenario
-	public void LoseScenario()
-	{
-		//Prevent multiple successive calls to this method
-		if (this.isScenarioOver == false)
-		{
-			//Set the "scenario over" flag
-			this.isScenarioOver = true;
+            //Play the narrator's sound clip
+            NarratorLibrary.PlayNarration(null, NarratorLibrary.GetWinNarration());
 
-			//Play the narrator's sound clip
-			NarratorLibrary.PlayNarration(null, this.getScenarioLostNarration());
+            //Show the "scenario won" text
+            //...
 
-			//Show the "scenario lost" text
-			//...
+            //Delay before the level load, so the player can see the transition
+            Timer.SetTimer(5.0f, this.gameObject, delegate()
+            {
+                //Load the next level
+                Application.LoadLevel(Application.loadedLevel + 1);
+            });
+        }
+    }
 
-			//Delay before the level load, so the player can see the transition
-			Timer.SetTimer(5.0f, this.gameObject, delegate()
-			{
-				//Restart the level
-				Application.LoadLevel(Application.loadedLevel);
-			});
-		}
-	}
+    //"Loses" the scenario
+    public void LoseScenario(Weapons loserWeapon)
+    {
+        //Prevent multiple successive calls to this method
+        if (this.isScenarioOver == false)
+        {
+            //Set the "scenario over" flag
+            this.isScenarioOver = true;
 
-	//Registers a flag trigger
-	public void RegisterFlagTrigger(int[] triggerFlagsSet, int[] triggerFlagsUnset, FlagTriggerDelegate handler, bool isOneShot = false) {
-		this.flagTriggers.Add( new FlagTriggerDetails(triggerFlagsSet, triggerFlagsUnset, handler, isOneShot) );
-	}
-		
-	//Processes registered triggers whenever a flag changes
-	private void ProcessTriggers()
-	{
-		//Ensure any calls to SetFlag() within our triggers are queued
-		this.currentlyProcessingTriggers = true;
+            //Play the narrator's sound clip
+            NarratorLibrary.PlayNarration(null, NarratorLibrary.GetFailNarration(loserWeapon));
 
-		//Maintain a list of triggered one-shot handlers to remove
-		List<int> indicesToRemove = new List<int>();
+            //Show the "scenario lost" text
+            //...
 
-		int triggerIndex = 0;
-		foreach (FlagTriggerDetails trigger in this.flagTriggers)
-		{
-			//Determine if the triggering flags that need to be set are set
-			bool flagCriteriaMet = true;
-			foreach (int flag in trigger.triggerFlagsSet) {
-				flagCriteriaMet = flagCriteriaMet && this.GetFlag(flag);
-			}
+            //Delay before the level load, so the player can see the transition
+            Timer.SetTimer(5.0f, this.gameObject, delegate()
+            {
+                //Restart the level
+                Application.LoadLevel(Application.loadedLevel);
+            });
+        }
+    }
 
-			//Determine if the triggering flags that need to be unset are unset
-			foreach (int flag in trigger.triggerFlagsUnset) {
-				flagCriteriaMet = flagCriteriaMet && (this.GetFlag(flag) == false);
-			}
+    //Registers a flag trigger
+    public void RegisterFlagTrigger(int[] triggerFlagsSet, int[] triggerFlagsUnset, FlagTriggerDelegate handler, bool isOneShot = false)
+    {
+        this.flagTriggers.Add(new FlagTriggerDetails(triggerFlagsSet, triggerFlagsUnset, handler, isOneShot));
+    }
 
-			//If all of the flags are set, call the handler
-			if (flagCriteriaMet == true)
-			{
-				trigger.handler();
+    //Processes registered triggers whenever a flag changes
+    private void ProcessTriggers()
+    {
+        //Ensure any calls to SetFlag() within our triggers are queued
+        this.currentlyProcessingTriggers = true;
 
-				//If the handler was a one-shot, mark it for removal
-				if (trigger.isOneShot) {
-					indicesToRemove.Add(triggerIndex);
-				}
-			}
+        //Maintain a list of triggered one-shot handlers to remove
+        List<int> indicesToRemove = new List<int>();
 
-			++triggerIndex;
-		}
+        int triggerIndex = 0;
+        foreach (FlagTriggerDetails trigger in this.flagTriggers)
+        {
+            //Determine if the triggering flags that need to be set are set
+            bool flagCriteriaMet = true;
+            foreach (int flag in trigger.triggerFlagsSet)
+            {
+                flagCriteriaMet = flagCriteriaMet && this.GetFlag(flag);
+            }
 
-		//Remove any triggers that were marked for removal
-		foreach (int index in indicesToRemove) {
-			this.flagTriggers.RemoveAt(index);
-		}
+            //Determine if the triggering flags that need to be unset are unset
+            foreach (int flag in trigger.triggerFlagsUnset)
+            {
+                flagCriteriaMet = flagCriteriaMet && (this.GetFlag(flag) == false);
+            }
 
-		//Process any queued flag changes
-		this.currentlyProcessingTriggers = false;
-		while (this.queuedFlagChanges.Count > 0)
-		{
-			KeyValuePair<int,bool> currPair = this.queuedFlagChanges.Dequeue();
-			this.SetFlag( currPair.Key, currPair.Value );
-		}
-	}
+            //If all of the flags are set, call the handler
+            if (flagCriteriaMet == true)
+            {
+                trigger.handler();
 
-	//Concrete classes can override these methods if they want to:
-		
-		//Returns the narration clip for when we win the scenario
-		virtual protected Narration getScenarioWonNarration()  { return Narration.None; }
+                //If the handler was a one-shot, mark it for removal
+                if (trigger.isOneShot)
+                {
+                    indicesToRemove.Add(triggerIndex);
+                }
+            }
 
-		//Returns the narration clip for when we lose the scenario
-		virtual protected Narration getScenarioLostNarration() { return Narration.None; }
-		
-	//Concrete classes must implement these methods:
-		
-		//Returns the enum type used for our flags
-		abstract protected System.Type GetEnumType();
+            ++triggerIndex;
+        }
+
+        //Remove any triggers that were marked for removal
+        foreach (int index in indicesToRemove)
+        {
+            this.flagTriggers.RemoveAt(index);
+        }
+
+        //Process any queued flag changes
+        this.currentlyProcessingTriggers = false;
+        while (this.queuedFlagChanges.Count > 0)
+        {
+            KeyValuePair<int, bool> currPair = this.queuedFlagChanges.Dequeue();
+            this.SetFlag(currPair.Key, currPair.Value);
+        }
+    }
+
+    //Concrete classes can override these methods if they want to:
+
+    //Concrete classes must implement these methods:
+
+    //Returns the enum type used for our flags
+    abstract protected System.Type GetEnumType();
 }

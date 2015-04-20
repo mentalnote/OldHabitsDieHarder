@@ -3,11 +3,6 @@ using System.Collections;
 
 public class CandleRoomScenario : Scenario
 {
-	//Returns the narration clip for when we win the scenario
-	protected override Narration getScenarioWonNarration()  { return Narration.Test1; }
-	
-	//Returns the narration clip for when we lose the scenario
-	protected override Narration getScenarioLostNarration() { return Narration.Test2; }
 	
 	//Our flags enum
 	public enum Flags
@@ -44,6 +39,6 @@ public class CandleRoomScenario : Scenario
 	{
 		Debug.Log("YOU DESTROYED THE CANDLE!");
 		Debug.Log ("CURRENT SCENARIO: " + ScenarioManager.GetCurrentScenario());
-		ScenarioManager.GetCurrentScenario().LoseScenario();
+		ScenarioManager.GetCurrentScenario().LoseScenario(Weapons.Bat);
 	}
 }

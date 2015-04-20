@@ -459,9 +459,33 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
+    - target: {fileID: 11481134, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: buttonImage
+      value: 
+      objectReference: {fileID: 1585427773}
+    - target: {fileID: 11481134, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481134, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: showButton
+      value: 
+      objectReference: {fileID: 21300000, guid: 16b111cabe8b7cb4c8da65131449bdc9,
+        type: 3}
+    - target: {fileID: 11481134, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hideButton
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ebfb6e9af632dd4fba8aaed6c8eede9,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1585427773 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11413558, guid: 2b75eafa7f8c17847af345e701cabd90,
+    type: 2}
+  m_PrefabInternal: {fileID: 649266430}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &2091723564
 GameObject:
   m_ObjectHideFlags: 0

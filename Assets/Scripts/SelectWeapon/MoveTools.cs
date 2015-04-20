@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public sealed class MoveTools : MonoBehaviour
 {
@@ -8,6 +9,15 @@ public sealed class MoveTools : MonoBehaviour
     [SerializeField]
     private Vector2 normalizedPosition = Vector2.zero;
     private bool show = true;
+
+    [SerializeField]
+    private Image buttonImage;
+
+    [SerializeField]
+    private Sprite showButton;
+
+    [SerializeField]
+    private Sprite hideButton;
 
     public Vector2 NormalizedPosition
     {
@@ -38,6 +48,7 @@ public sealed class MoveTools : MonoBehaviour
     public void Move()
     {
         this.normalizedPosition = this.show ? new Vector2(0, 0) : new Vector2(0, -0.75f);
+        this.buttonImage.overrideSprite = this.show ? this.hideButton : this.showButton;
         this.show = !this.show;
     }
 

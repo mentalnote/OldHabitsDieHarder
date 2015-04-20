@@ -12,7 +12,20 @@
 /// </summary>
 public enum Narration
 {
-	None,
-    Test1,
-    Test2
+    BatFail,
+    BottleFail,
+    FlameThrowerFail,
+    GlovesFail,
+    GunFail,
+    KnifeFail,
+    SawFail,
+    SwordFail,
+    Intro,
+    Win1,
+    Win2,
+    Win3,
+    Win4,
+    Win5,
+    GameWin,
+    None
 }
