@@ -48,11 +48,11 @@ public class NarratorLibrary : MonoBehaviour
         }
     }
 
-    public static void PlayNarration(AudioSource audioSource, Narration narration)
+    public static float PlayNarration(AudioSource audioSource, Narration narration)
     {
         if (narration == Narration.None)
         {
-            return;
+            return 0.0f;
         }
 
         if (!NarrationMap.ContainsKey(narration))
@@ -73,6 +73,8 @@ public class NarratorLibrary : MonoBehaviour
                 AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position);
             }
         }
+
+        return sound.length;
     }
 
     private static AudioClip LoadAudioClip(Narration narration)
