@@ -3,7 +3,6 @@ using System.Collections;
 
 public class DogRoomScenario : Scenario
 {
-	
 	//Our flags enum
 	public enum Flags
 	{

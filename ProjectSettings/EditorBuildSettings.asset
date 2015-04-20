@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Scenarios/CandleScenario.unity
   - enabled: 1
     path: Assets/Scenes/Scenarios/DogScenario.unity
+  - enabled: 1
+    path: Assets/Scenes/Scenarios/BabbyScenario.unity

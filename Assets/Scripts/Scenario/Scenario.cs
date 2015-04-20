@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 
@@ -23,6 +24,9 @@ abstract public class Scenario : MonoBehaviour
         public FlagTriggerDelegate handler;
         public bool isOneShot;
     }
+
+    [SerializeField]
+    private Text endingText = null;
 
     //Keep track of whether or not we are in the middle of processing triggers
     private bool currentlyProcessingTriggers = false;
@@ -116,6 +120,10 @@ abstract public class Scenario : MonoBehaviour
         //Prevent multiple successive calls to this method
         if (this.isScenarioOver == false)
         {
+            endingText.gameObject.SetActive(true);
+            endingText.text = "Success!";
+            endingText.color = Color.white;
+
             //Set the "scenario over" flag
             this.isScenarioOver = true;
 
@@ -137,6 +145,10 @@ abstract public class Scenario : MonoBehaviour
         //Prevent multiple successive calls to this method
         if (this.isScenarioOver == false)
         {
+            endingText.gameObject.SetActive(true);
+            endingText.text = "Failure!";
+            endingText.color = Color.white;
+
             //Set the "scenario over" flag
             this.isScenarioOver = true;
 
