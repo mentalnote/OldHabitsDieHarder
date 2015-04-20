@@ -45,7 +45,7 @@ public class ItBurnsAhhhhhhh : MonoBehaviour
             Destroy(this.transform.root.gameObject);
             Destroy(ahhhh.transform.root.gameObject);
         }
-        else if (!this.hitGround && ahhhh == null)
+        else if (!this.hitGround && ahhhh == null && collision.gameObject.name != "Player")
         {
             this.hitGround = true;
             Rigidbody rigidbody = this.GetComponent<Rigidbody>();
