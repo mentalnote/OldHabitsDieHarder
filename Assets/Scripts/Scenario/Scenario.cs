@@ -126,7 +126,7 @@ abstract public class Scenario : MonoBehaviour
             //...
 
             //Delay before the level load, so the player can see the transition
-            Timer.SetTimer(5.0f, this.gameObject, delegate()
+            Timer.SetTimer(7.0f, this.gameObject, delegate()
             {
                 //Load the next level
                 Application.LoadLevel(Application.loadedLevel + 1);
