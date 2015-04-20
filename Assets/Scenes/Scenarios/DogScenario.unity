@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4045724c885f24dbebf31ca4d837c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFinal: 0
   endingText: {fileID: 1476194669}
 --- !u!4 &261184394
 Transform:

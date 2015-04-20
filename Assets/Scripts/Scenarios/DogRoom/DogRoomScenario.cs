@@ -10,7 +10,8 @@ public class DogRoomScenario : Scenario
 		PoopCaught,
 		BoardKnockedAway,
 		DogDestroyed,
-        PoopMissed
+        PoopMissed,
+        BoardKilled
 	};
 
 	//We need to implement this to tell the base class about our flag enum
@@ -41,6 +42,14 @@ public class DogRoomScenario : Scenario
             true  //isOneShot
         );
 
+        //When the board is killed, we lose the level
+        this.RegisterFlagTrigger(
+            EnumUtil.ValuesToArray(new[] { Flags.BoardKilled }),
+            new int[] { },
+            new FlagTriggerDelegate(this.OnBoardKilled),
+            true  //isOneShot
+        );
+
         this.RegisterFlagTrigger(
             EnumUtil.ValuesToArray(new[] { 
                 Flags.BoardRetrieved,
@@ -63,6 +72,13 @@ public class DogRoomScenario : Scenario
     private void OnPoopMissed(int cause)
     {
         Debug.Log("YOU MISSED THE POOP!");
+        Debug.Log("CURRENT SCENARIO: " + ScenarioManager.GetCurrentScenario());
+        ScenarioManager.GetCurrentScenario().LoseScenario((Weapons)cause);
+    }
+
+    private void OnBoardKilled(int cause)
+    {
+        Debug.Log("YOU KILLED THE BOARD!");
         Debug.Log("CURRENT SCENARIO: " + ScenarioManager.GetCurrentScenario());
         ScenarioManager.GetCurrentScenario().LoseScenario((Weapons)cause);
     }

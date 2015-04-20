@@ -27,6 +27,14 @@ public sealed class Skateboarder : MonoBehaviour
 
             MonoBehaviour.Destroy(this);
         }
+        else if (weaponType != Weapons.None)
+        {
+            ScenarioManager.GetCurrentScenario().SetFlag(weaponType, DogRoomScenario.Flags.BoardKilled, true);
+
+            this.transform.rotation *= Quaternion.Euler(0.0f, 0.0f, -90.0f);
+
+            MonoBehaviour.Destroy(this);
+        }
     }
 
     private void Update()
