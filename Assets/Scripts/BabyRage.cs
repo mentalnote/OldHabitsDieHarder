@@ -3,15 +3,33 @@ using System.Collections;
 
 public class BabyRage : MonoBehaviour {
 
+    [SerializeField]
+    private Animation anim;
 
+    [SerializeField]
+    private AnimationClip animClip;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    private void Start()
+    {
+        if (this.anim != null && this.animClip != null)
+        {
+            this.anim[this.animClip.name].wrapMode = WrapMode.Loop;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Weapons hitBy = Weapon.GetWeaponType(collision.gameObject);
+
+        if (hitBy != Weapons.None)
+        {
+
+            ScenarioManager.GetCurrentScenario().SetFlag<Weapons, BabyScenario.Flags>(hitBy, BabyScenario.Flags.BabyPopped, true);
+            if (this.anim != null)
+            {
+                this.anim.Stop();
+                Destroy(this.anim);
+            }
+        }
+    }
 }

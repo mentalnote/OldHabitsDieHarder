@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 3ba78951453a60043b7a73052c70e0bb
+timeCreated: 1429520590
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Corgi_Butt
+    100002: Corgi_Centre
+    100004: Corgi_Chest
+    100006: Corgi_FrontLeft1
+    100008: Corgi_FrontLeft2
+    100010: Corgi_FrontRight1
+    100012: Corgi_FrontRight2
+    100014: Corgi_Head
+    100016: Corgi_LeftEar1
+    100018: Corgi_LeftEar2
+    100020: Corgi_LeftHip
+    100022: Corgi_Neck
+    100024: Corgi_Nose
+    100026: Corgi_RearLeft1
+    100028: Corgi_RearLeft2
+    100030: Corgi_RearRight1
+    100032: Corgi_RearRight2
+    100034: Corgi_RightEar1
+    100036: Corgi_RightEar2
+    100038: Corgi_RightHip
+    100040: Corgi_Root
+    100042: //RootNode
+    100044: pSphere3
+    400000: Corgi_Butt
+    400002: Corgi_Centre
+    400004: Corgi_Chest
+    400006: Corgi_FrontLeft1
+    400008: Corgi_FrontLeft2
+    400010: Corgi_FrontRight1
+    400012: Corgi_FrontRight2
+    400014: Corgi_Head
+    400016: Corgi_LeftEar1
+    400018: Corgi_LeftEar2
+    400020: Corgi_LeftHip
+    400022: Corgi_Neck
+    400024: Corgi_Nose
+    400026: Corgi_RearLeft1
+    400028: Corgi_RearLeft2
+    400030: Corgi_RearRight1
+    400032: Corgi_RearRight2
+    400034: Corgi_RightEar1
+    400036: Corgi_RightEar2
+    400038: Corgi_RightHip
+    400040: Corgi_Root
+    400042: //RootNode
+    400044: pSphere3
+    4300000: pSphere3
+    7400000: Struggle
+    9500000: //RootNode
+    13700000: pSphere3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Struggle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Corgi_Root
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Butt
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Butt/Corgi_LeftHip
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Butt/Corgi_LeftHip/Corgi_RearLeft1
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Butt/Corgi_LeftHip/Corgi_RearLeft1/Corgi_RearLeft2
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Butt/Corgi_RightHip
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Butt/Corgi_RightHip/Corgi_RearRight1
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Butt/Corgi_RightHip/Corgi_RearRight1/Corgi_RearRight2
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_FrontLeft1
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_FrontLeft1/Corgi_FrontLeft2
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_FrontRight1
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_FrontRight1/Corgi_FrontRight2
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_Neck
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_Neck/Corgi_Head
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_Neck/Corgi_Head/Corgi_LeftEar1
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_Neck/Corgi_Head/Corgi_LeftEar1/Corgi_LeftEar2
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_Neck/Corgi_Head/Corgi_Nose
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_Neck/Corgi_Head/Corgi_RightEar1
+        weight: 1
+      - path: Corgi_Root/Corgi_Centre/Corgi_Chest/Corgi_Neck/Corgi_Head/Corgi_RightEar1/Corgi_RightEar2
+        weight: 1
+      - path: pSphere3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

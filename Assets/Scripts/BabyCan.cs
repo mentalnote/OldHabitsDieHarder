@@ -11,14 +11,33 @@ public class BabyCan : MonoBehaviour {
 
     private bool isOpened = false;
 
+    private bool isAttached = false;
+
+    private Vector3 offset = Vector3.zero;
+
+    private Transform attachedTo;
+
+    private void Update()
+    {
+        if (this.isAttached && this.attachedTo != null)
+        {
+            this.transform.position = this.attachedTo.position + this.offset;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         Weapons hitBy = Weapon.GetWeaponType(collision.gameObject);
 
         if (this.isOpened && hitBy == Weapons.Bottle && collision.transform != this.transform.parent)
         {
-            this.transform.parent = collision.transform;
-            this.transform.position = collision.contacts[0].point;
+            Weapon weapon = collision.gameObject.GetComponentInChildren<Weapon>();
+            if (weapon != null)
+            {
+                this.attachedTo = weapon.transform;
+                this.offset = weapon.transform.position - collision.contacts[0].point;
+                this.isAttached = true;
+            }
         }
         else if (!this.isOpened && hitBy == Weapons.Chainsaw)
         {
@@ -29,6 +48,10 @@ public class BabyCan : MonoBehaviour {
                 this.anim.Play(this.animClip.name);
                 this.anim[this.animClip.name].wrapMode = WrapMode.Once;
             }
+        }
+        else if (hitBy != Weapons.Bottle && hitBy != Weapons.Chainsaw && hitBy != Weapons.None)
+        {
+            ScenarioManager.GetCurrentScenario().SetFlag<Weapons, BabyScenario.Flags>(hitBy, BabyScenario.Flags.FoodDestroyed, true);
         }
         else
         {
