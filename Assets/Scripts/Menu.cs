@@ -6,4 +6,9 @@ public sealed class Menu : MonoBehaviour
     {
         Application.LoadLevel(levelName);
     }
+	
+	private void Start()
+	{
+		Screen.lockCursor = false;
+	}
 }
