@@ -10,7 +10,6 @@ GameObject:
   - 224: {fileID: 22417464}
   - 222: {fileID: 22269320}
   - 114: {fileID: 11479986}
-  - 114: {fileID: 11406316}
   - 114: {fileID: 11476418}
   m_Layer: 5
   m_Name: Text
@@ -37,30 +36,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &11406316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 01000000
-  timeWrapType: 3
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 2
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 40}
-  scaleExtent: {x: 0, y: 0, z: 0}
-  previousPreset: 0
 --- !u!114 &11409646
 MonoBehaviour:
   m_ObjectHideFlags: 1

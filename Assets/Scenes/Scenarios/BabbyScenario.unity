@@ -765,6 +765,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb2378714ea144b49063219b2de6cd7, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1160570802
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11490916, guid: 1cb2378714ea144b49063219b2de6cd7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1160570801}
+  m_Script: {fileID: 11500000, guid: 704f5837d3a56b646b7c8b1c228f1308, type: 3}
 --- !u!1001 &1166601438
 Prefab:
   m_ObjectHideFlags: 0
@@ -892,6 +898,38 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11447062, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hands
+      value: 
+      objectReference: {fileID: 1160570802}
+    - target: {fileID: 11443448, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hands
+      value: 
+      objectReference: {fileID: 1160570802}
+    - target: {fileID: 11471104, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hands
+      value: 
+      objectReference: {fileID: 1160570802}
+    - target: {fileID: 11498138, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hands
+      value: 
+      objectReference: {fileID: 1160570802}
+    - target: {fileID: 11400822, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hands
+      value: 
+      objectReference: {fileID: 1160570802}
+    - target: {fileID: 11450410, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hands
+      value: 
+      objectReference: {fileID: 1160570802}
+    - target: {fileID: 11449884, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hands
+      value: 
+      objectReference: {fileID: 1160570802}
+    - target: {fileID: 11407680, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
+      propertyPath: hands
+      value: 
+      objectReference: {fileID: 1160570802}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b75eafa7f8c17847af345e701cabd90, type: 2}
   m_IsPrefabParent: 0

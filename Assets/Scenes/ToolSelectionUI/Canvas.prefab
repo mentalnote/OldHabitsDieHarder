@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11441432}
   - 114: {fileID: 11465770}
   - 114: {fileID: 11403942}
-  - 114: {fileID: 11482094}
   - 114: {fileID: 11471104}
   - 114: {fileID: 11420934}
   m_Layer: 5
@@ -52,7 +51,6 @@ GameObject:
   - 114: {fileID: 11444650}
   - 114: {fileID: 11443220}
   - 114: {fileID: 11483862}
-  - 114: {fileID: 11426002}
   - 114: {fileID: 11450410}
   - 114: {fileID: 11450182}
   m_Layer: 5
@@ -107,7 +105,6 @@ GameObject:
   - 114: {fileID: 11493262}
   - 114: {fileID: 11460868}
   - 114: {fileID: 11477450}
-  - 114: {fileID: 11413710}
   - 114: {fileID: 11443448}
   - 114: {fileID: 11463454}
   m_Layer: 5
@@ -144,7 +141,6 @@ GameObject:
   - 224: {fileID: 22460806}
   - 222: {fileID: 22262082}
   - 114: {fileID: 11416902}
-  - 114: {fileID: 11401602}
   - 114: {fileID: 11498268}
   - 114: {fileID: 11489974}
   m_Layer: 5
@@ -166,7 +162,6 @@ GameObject:
   - 114: {fileID: 11461798}
   - 114: {fileID: 11462050}
   - 114: {fileID: 11465662}
-  - 114: {fileID: 11499982}
   - 114: {fileID: 11407680}
   - 114: {fileID: 11485522}
   m_Layer: 5
@@ -184,7 +179,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22478442}
-  - 114: {fileID: 11415408}
   m_Layer: 5
   m_Name: Showing 1
   m_TagString: Untagged
@@ -204,7 +198,6 @@ GameObject:
   - 114: {fileID: 11496032}
   - 114: {fileID: 11434242}
   - 114: {fileID: 11458198}
-  - 114: {fileID: 11476246}
   - 114: {fileID: 11447062}
   - 114: {fileID: 11417950}
   m_Layer: 5
@@ -226,7 +219,6 @@ GameObject:
   - 114: {fileID: 11496940}
   - 114: {fileID: 11489240}
   - 114: {fileID: 11476104}
-  - 114: {fileID: 11402220}
   - 114: {fileID: 11449884}
   - 114: {fileID: 11438304}
   m_Layer: 5
@@ -248,7 +240,6 @@ GameObject:
   - 114: {fileID: 11457274}
   - 114: {fileID: 11415210}
   - 114: {fileID: 11492278}
-  - 114: {fileID: 11463236}
   - 114: {fileID: 11400822}
   - 114: {fileID: 11417930}
   m_Layer: 5
@@ -270,7 +261,6 @@ GameObject:
   - 114: {fileID: 11436122}
   - 114: {fileID: 11412406}
   - 114: {fileID: 11442966}
-  - 114: {fileID: 11441226}
   - 114: {fileID: 11498138}
   - 114: {fileID: 11493870}
   m_Layer: 5
@@ -292,7 +282,6 @@ GameObject:
   - 114: {fileID: 11413558}
   - 114: {fileID: 11494394}
   - 114: {fileID: 11430658}
-  - 114: {fileID: 11429070}
   - 114: {fileID: 11412882}
   - 114: {fileID: 11481134}
   m_Layer: 5
@@ -345,54 +334,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hands: {fileID: 0}
   selectedWeapon: {fileID: 0}
---- !u!114 &11401602
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150878}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
---- !u!114 &11402220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178122}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
 --- !u!114 &11403942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,7 +350,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11482094}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -427,7 +368,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11482094}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -439,7 +380,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11482094}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -451,7 +392,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11482094}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -599,30 +540,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11413710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128108}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
 --- !u!114 &11415210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -688,72 +605,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11415408
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169890}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -2019158647, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  boolAnimations: []
-  intAnimations: []
-  floatAnimations: []
-  vector3Animations:
-  - target: {fileID: 22462284}
-    propertyAccess: anchoredPosition3D
-    xValues:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    yValues:
-      serializedVersion: 2
-      m_Curve:
-      - time: .000608053058
-        value: -525.134155
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: .49913013
-        value: -480.462433
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    zValues:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-  rotationAnimations: []
-  colorAnimations: []
 --- !u!114 &11416902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -770,7 +621,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11401602}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -788,7 +639,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11401602}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -800,7 +651,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11401602}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -812,7 +663,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11401602}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -882,54 +733,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
---- !u!114 &11426002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114838}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
---- !u!114 &11429070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182576}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
 --- !u!114 &11430658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -946,7 +749,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11429070}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -964,7 +767,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11429070}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -976,7 +779,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11429070}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -988,7 +791,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11429070}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -1123,30 +926,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
---- !u!114 &11441226
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178798}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
 --- !u!114 &11441432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1184,7 +963,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11441226}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1202,7 +981,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11441226}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1214,7 +993,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11441226}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -1226,7 +1005,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11441226}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -1429,7 +1208,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11476246}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1447,7 +1226,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11476246}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1459,7 +1238,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11476246}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -1471,7 +1250,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11476246}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -1636,30 +1415,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11463236
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178648}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
 --- !u!114 &11463454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1690,7 +1445,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11499982}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1708,7 +1463,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11499982}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1720,7 +1475,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11499982}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -1732,7 +1487,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11499982}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -1861,7 +1616,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11402220}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1879,7 +1634,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11402220}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1891,7 +1646,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11402220}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -1903,7 +1658,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11402220}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -1917,30 +1672,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!114 &11476246
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176554}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
 --- !u!114 &11477450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1957,7 +1688,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11413710}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1975,7 +1706,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11413710}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -1987,7 +1718,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11413710}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -1999,7 +1730,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11413710}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -2041,30 +1772,7 @@ MonoBehaviour:
   buttonImage: {fileID: 11413558}
   showButton: {fileID: 21300000, guid: 16b111cabe8b7cb4c8da65131449bdc9, type: 3}
   hideButton: {fileID: 21300000, guid: 2ebfb6e9af632dd4fba8aaed6c8eede9, type: 3}
---- !u!114 &11482094
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100440}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
+  firstPersonController: {fileID: 0}
 --- !u!114 &11483862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2081,7 +1789,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11426002}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -2099,7 +1807,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11426002}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -2111,7 +1819,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11426002}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -2123,7 +1831,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11426002}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -2274,7 +1982,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11463236}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -2292,7 +2000,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11463236}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -2304,7 +2012,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11463236}
+        - m_Target: {fileID: 0}
           m_MethodName: RestoreTransform
           m_Mode: 1
           m_Arguments:
@@ -2316,7 +2024,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 11463236}
+        - m_Target: {fileID: 0}
           m_MethodName: ResetTimeRunning
           m_Mode: 1
           m_Arguments:
@@ -2504,30 +2212,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
---- !u!114 &11499982
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169274}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1753508737, guid: dbdf9a64e2f43a541a185fb201bf1bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomiseStartTime: 0
-  timeRemaining: 0
-  preset: 0
-  weightTypes: 
-  timeWrapType: 1
-  interpolateType: 0
-  restoreTransformOnDestruction: 0
-  rateModifier: 3
-  extentModifier: 1
-  positionExtent: {x: 0, y: 0, z: 0}
-  rotationExtent: {x: 0, y: 0, z: 0}
-  scaleExtent: {x: .300000012, y: .300000012, z: .300000012}
-  previousPreset: 0
 --- !u!222 &22206626
 CanvasRenderer:
   m_ObjectHideFlags: 1
