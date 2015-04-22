@@ -55,11 +55,13 @@ public sealed class MoveTools : MonoBehaviour
         this.normalizedPosition = this.show ? new Vector2(0, 0) : new Vector2(0, -0.75f);
         this.buttonImage.overrideSprite = this.show ? this.hideButton : this.showButton;
         this.firstPersonController.enabled = !this.show;
+		Screen.lockCursor = !this.show;
         this.show = !this.show;
     }
 
     private void Start()
     {
+		Screen.lockCursor = true;
         this.Update();
     }
 
